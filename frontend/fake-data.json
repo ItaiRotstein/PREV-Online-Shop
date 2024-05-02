@@ -1,0 +1,2373 @@
+[
+    {
+        "name": "Striped Polo Shirt",
+        "category": "Shirts",
+        "price": 39.99,
+        "colors": [
+            "Blue",
+            "Red",
+            "Green"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Cotton"
+        ],
+        "gender": [
+            "Men",
+            "Older Boys",
+            "Younger Boys"
+        ],
+        "use": [
+            "Casual",
+            "Sportswear"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/stripedpoloshirt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/stripedpoloshirt-1/315/472",
+            "https://picsum.photos/seed/stripedpoloshirt-2/315/472",
+            "https://picsum.photos/seed/stripedpoloshirt-3/315/472",
+            "https://picsum.photos/seed/stripedpoloshirt-4/315/472"
+        ]
+    },
+    {
+        "name": "Floral Maxi Dress",
+        "category": "Dresses",
+        "price": 149.90,
+        "colors": [
+            "Red",
+            "Blue",
+            "Green"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Polyester",
+            "Cotton"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": [
+            "Smart Casual",
+            "Summerwear"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/floralmaxidress-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/floralmaxidress-1/315/472",
+            "https://picsum.photos/seed/floralmaxidress-2/315/472",
+            "https://picsum.photos/seed/floralmaxidress-3/315/472",
+            "https://picsum.photos/seed/floralmaxidress-4/315/472"
+        ]
+    },
+    {
+        "name": "Skinny Fit Jeans",
+        "category": "Jeans",
+        "price": 79.99,
+        "colors": [
+            "Blue",
+            "Red"
+        ],
+        "sizes": [
+            "28W x 30L",
+            "30W x 32L",
+            "32W x 34L",
+            "34W x 36L"
+        ],
+        "material": [
+            "Denim",
+            "Spandex",
+            "Cotton"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": [
+            "Casual",
+            "Streetwear"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/skinnyfitjeans-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/skinnyfitjeans-1/315/472",
+            "https://picsum.photos/seed/skinnyfitjeans-2/315/472",
+            "https://picsum.photos/seed/skinnyfitjeans-3/315/472",
+            "https://picsum.photos/seed/skinnyfitjeans-4/315/472"
+        ]
+    },
+    {
+        "name": "V-Neck Sweater",
+        "category": "Sweaters",
+        "price": 59.99,
+        "colors": [
+            "Blue",
+            "Red",
+            "Green"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Wool",
+            "Cashmere"
+        ],
+        "gender": [
+            "Men",
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Formal"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/vnecksweater-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/vnecksweater-1/315/472",
+            "https://picsum.photos/seed/vnecksweater-2/315/472",
+            "https://picsum.photos/seed/vnecksweater-3/315/472",
+            "https://picsum.photos/seed/vnecksweater-4/315/472"
+        ]
+    },
+    {
+        "name": "Cable Knit Sweater",
+        "category": "Sweaters",
+        "price": 69.99,
+        "colors": [
+            "Blue",
+            "Red",
+            "Green"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Wool"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Winterwear"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/cableknitsweater-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/cableknitsweater-1/315/472",
+            "https://picsum.photos/seed/cableknitsweater-2/315/472",
+            "https://picsum.photos/seed/cableknitsweater-3/315/472",
+            "https://picsum.photos/seed/cableknitsweater-4/315/472"
+        ]
+    },
+    {
+        "name": "Cropped Hoodie",
+        "category": "Hoodies",
+        "price": 49.99,
+        "colors": [
+            "Blue",
+            "Red",
+            "Green"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Cotton",
+            "Polyester"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Loungewear"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/croppedhoodie-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/croppedhoodie-1/315/472",
+            "https://picsum.photos/seed/croppedhoodie-2/315/472",
+            "https://picsum.photos/seed/croppedhoodie-3/315/472",
+            "https://picsum.photos/seed/croppedhoodie-4/315/472"
+        ]
+    },
+    {
+        "name": "High-Waisted Jeans",
+        "category": "Jeans",
+        "price": 89.99,
+        "colors": [
+            "Blue"
+        ],
+        "sizes": [
+            "26W x 30L",
+            "28W x 32L",
+            "30W x 34L",
+            "32W x 36L"
+        ],
+        "material": [
+            "Denim"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Streetwear"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/highwaistedjeans-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/highwaistedjeans-1/315/472",
+            "https://picsum.photos/seed/highwaistedjeans-2/315/472",
+            "https://picsum.photos/seed/highwaistedjeans-3/315/472",
+            "https://picsum.photos/seed/highwaistedjeans-4/315/472"
+        ]
+    },
+    {
+        "name": "Graphic T-Shirt",
+        "category": "T-Shirts",
+        "price": 24.99,
+        "colors": [
+            "Blue",
+            "Red",
+            "Green"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Cotton"
+        ],
+        "gender": [
+            "Men",
+            "Older Boys",
+            "Younger Boys"
+        ],
+        "use": [
+            "Casual",
+            "Streetwear"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/graphictshirt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/graphictshirt-1/315/472",
+            "https://picsum.photos/seed/graphictshirt-2/315/472",
+            "https://picsum.photos/seed/graphictshirt-3/315/472",
+            "https://picsum.photos/seed/graphictshirt-4/315/472"
+        ]
+    },
+    {
+        "name": "Quilted Jacket",
+        "category": "Jackets",
+        "price": 99.99,
+        "colors": [
+            "Blue",
+            "Red",
+            "Green"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Polyester",
+            "Cotton"
+        ],
+        "gender": [
+            "Men",
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Outdoor"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/quiltedjacket-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/quiltedjacket-1/315/472",
+            "https://picsum.photos/seed/quiltedjacket-2/315/472",
+            "https://picsum.photos/seed/quiltedjacket-3/315/472",
+            "https://picsum.photos/seed/quiltedjacket-4/315/472"
+        ]
+    },
+    {
+        "name": "Printed Blouse",
+        "category": "Blouses",
+        "price": 34.99,
+        "colors": [
+            "Red",
+            "Blue",
+            "Green"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Silk",
+            "Polyester"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": [
+            "Smart Casual",
+            "Workwear"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/printedblouse-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/printedblouse-1/315/472",
+            "https://picsum.photos/seed/printedblouse-2/315/472",
+            "https://picsum.photos/seed/printedblouse-3/315/472",
+            "https://picsum.photos/seed/printedblouse-4/315/472"
+        ]
+    },
+    {
+        "name": "Checked Shirt",
+        "category": "Shirts",
+        "price": 44.99,
+        "colors": [
+            "Red",
+            "Blue",
+            "Green"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Cotton"
+        ],
+        "gender": [
+            "Men",
+            "Older Boys",
+            "Younger Boys"
+        ],
+        "use": [
+            "Casual",
+            "Smart Casual"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/checkedshirt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/checkedshirt-1/315/472",
+            "https://picsum.photos/seed/checkedshirt-2/315/472",
+            "https://picsum.photos/seed/checkedshirt-3/315/472",
+            "https://picsum.photos/seed/checkedshirt-4/315/472"
+        ]
+    },
+    {
+        "name": "Embroidered Midi Dress",
+        "category": "Dresses",
+        "price": 129.90,
+        "colors": [
+            "Red",
+            "Blue"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Polyester",
+            "Cotton"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": [
+            "Formal",
+            "Eveningwear"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/embroideredmididress-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/embroideredmididress-1/315/472",
+            "https://picsum.photos/seed/embroideredmididress-2/315/472",
+            "https://picsum.photos/seed/embroideredmididress-3/315/472",
+            "https://picsum.photos/seed/embroideredmididress-4/315/472"
+        ]
+    },
+    {
+        "name": "Relaxed Fit Chinos",
+        "category": "Pants",
+        "price": 59.99,
+        "colors": [
+            "Beige",
+            "Navy"
+        ],
+        "sizes": [
+            "28W x 30L",
+            "30W x 32L",
+            "32W x 34L",
+            "34W x 36L"
+        ],
+        "material": [
+            "Cotton",
+            "Spandex"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": [
+            "Casual",
+            "Business Casual"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/relaxedfitchinos-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/relaxedfitchinos-1/315/472",
+            "https://picsum.photos/seed/relaxedfitchinos-2/315/472",
+            "https://picsum.photos/seed/relaxedfitchinos-3/315/472",
+            "https://picsum.photos/seed/relaxedfitchinos-4/315/472"
+        ]
+    },
+    {
+        "name": "Chunky Knit Cardigan",
+        "category": "Sweaters",
+        "price": 79.99,
+        "colors": [
+            "Gray",
+            "Beige"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Wool"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Winterwear"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/chunkyknitcardigan-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/chunkyknitcardigan-1/315/472",
+            "https://picsum.photos/seed/chunkyknitcardigan-2/315/472",
+            "https://picsum.photos/seed/chunkyknitcardigan-3/315/472",
+            "https://picsum.photos/seed/chunkyknitcardigan-4/315/472"
+        ]
+    },
+    {
+        "name": "Denim Jacket",
+        "category": "Jackets",
+        "price": 69.99,
+        "colors": [
+            "Blue"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Denim"
+        ],
+        "gender": [
+            "Men",
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Streetwear"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/denimjacket-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/denimjacket-1/315/472",
+            "https://picsum.photos/seed/denimjacket-2/315/472",
+            "https://picsum.photos/seed/denimjacket-3/315/472",
+            "https://picsum.photos/seed/denimjacket-4/315/472"
+        ]
+    },
+    {
+        "name": "Patterned Blazer",
+        "category": "Blazers",
+        "price": 99.99,
+        "colors": [
+            "Navy",
+            "Gray"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Polyester",
+            "Viscose"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": [
+            "Formal",
+            "Business Casual"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/patternedblazer-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/patternedblazer-1/315/472",
+            "https://picsum.photos/seed/patternedblazer-2/315/472",
+            "https://picsum.photos/seed/patternedblazer-3/315/472",
+            "https://picsum.photos/seed/patternedblazer-4/315/472"
+        ]
+    },
+    {
+        "name": "Printed Scarf",
+        "category": "Accessories",
+        "price": 19.99,
+        "colors": [
+            "Red",
+            "Blue",
+            "Green"
+        ],
+        "sizes": [
+            "One Size"
+        ],
+        "material": [
+            "Silk",
+            "Cashmere"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Winterwear"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/printedscarf-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/printedscarf-1/315/472",
+            "https://picsum.photos/seed/printedscarf-2/315/472",
+            "https://picsum.photos/seed/printedscarf-3/315/472",
+            "https://picsum.photos/seed/printedscarf-4/315/472"
+        ]
+    },
+    {
+        "name": "Hooded Parka",
+        "category": "Jackets",
+        "price": 129.99,
+        "colors": [
+            "Green",
+            "Navy"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Polyester",
+            "Cotton"
+        ],
+        "gender": [
+            "Men",
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Outdoor"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/hoodedparka-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/hoodedparka-1/315/472",
+            "https://picsum.photos/seed/hoodedparka-2/315/472",
+            "https://picsum.photos/seed/hoodedparka-3/315/472",
+            "https://picsum.photos/seed/hoodedparka-4/315/472"
+        ]
+    },
+    {
+        "name": "Pleated Skirt",
+        "category": "Skirts",
+        "price": 59.99,
+        "colors": [
+            "Red",
+            "Blue",
+            "Green"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Polyester"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Workwear"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/pleatedskirt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/pleatedskirt-1/315/472",
+            "https://picsum.photos/seed/pleatedskirt-2/315/472",
+            "https://picsum.photos/seed/pleatedskirt-3/315/472",
+            "https://picsum.photos/seed/pleatedskirt-4/315/472"
+        ]
+    },
+    {
+        "name": "Patterned Socks",
+        "category": "Socks",
+        "price": 9.99,
+        "colors": [
+            "Red",
+            "Blue",
+            "Green"
+        ],
+        "sizes": [
+            "One Size"
+        ],
+        "material": [
+            "Cotton",
+            "Polyester"
+        ],
+        "gender": [
+            "Men",
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Loungewear"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/patternedsocks-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/patternedsocks-1/315/472",
+            "https://picsum.photos/seed/patternedsocks-2/315/472",
+            "https://picsum.photos/seed/patternedsocks-3/315/472",
+            "https://picsum.photos/seed/patternedsocks-4/315/472"
+        ]
+    },
+    {
+        "name": "Striped Linen Shirt",
+        "category": "Shirts",
+        "price": 49.99,
+        "colors": [
+            "Blue",
+            "Green"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Linen"
+        ],
+        "gender": [
+            "Men",
+            "Older Boys"
+        ],
+        "use": [
+            "Casual",
+            "Beachwear"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/stripedlinenshirt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/stripedlinenshirt-1/315/472",
+            "https://picsum.photos/seed/stripedlinenshirt-2/315/472",
+            "https://picsum.photos/seed/stripedlinenshirt-3/315/472",
+            "https://picsum.photos/seed/stripedlinenshirt-4/315/472"
+        ]
+    },
+    {
+        "name": "Embroidered Denim Jacket",
+        "category": "Jackets",
+        "price": 89.99,
+        "colors": [
+            "Blue"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Denim"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Streetwear"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/embroidereddenimjacket-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/embroidereddenimjacket-1/315/472",
+            "https://picsum.photos/seed/embroidereddenimjacket-2/315/472",
+            "https://picsum.photos/seed/embroidereddenimjacket-3/315/472",
+            "https://picsum.photos/seed/embroidereddenimjacket-4/315/472"
+        ]
+    },
+    {
+        "name": "Floral Print Blouse",
+        "category": "Blouses",
+        "price": 39.99,
+        "colors": [
+            "Red",
+            "Green"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M"
+        ],
+        "material": [
+            "Polyester"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": [
+            "Smart Casual",
+            "Workwear"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/floralprintblouse-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/floralprintblouse-1/315/472",
+            "https://picsum.photos/seed/floralprintblouse-2/315/472",
+            "https://picsum.photos/seed/floralprintblouse-3/315/472",
+            "https://picsum.photos/seed/floralprintblouse-4/315/472"
+        ]
+    },
+    {
+        "name": "Cotton Joggers",
+        "category": "Pants",
+        "price": 59.99,
+        "colors": [
+            "Blue",
+            "Green"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Cotton",
+            "Spandex"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": [
+            "Casual",
+            "Sportswear"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/cottonjoggers-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/cottonjoggers-1/315/472",
+            "https://picsum.photos/seed/cottonjoggers-2/315/472",
+            "https://picsum.photos/seed/cottonjoggers-3/315/472",
+            "https://picsum.photos/seed/cottonjoggers-4/315/472"
+        ]
+    },
+    {
+        "name": "Cropped Trousers",
+        "category": "Pants",
+        "price": 69.99,
+        "colors": [
+            "Black",
+            "White"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Polyester",
+            "Viscose"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Smart Casual"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/croppedtrousers-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/croppedtrousers-1/315/472",
+            "https://picsum.photos/seed/croppedtrousers-2/315/472",
+            "https://picsum.photos/seed/croppedtrousers-3/315/472",
+            "https://picsum.photos/seed/croppedtrousers-4/315/472"
+        ]
+    },
+    {
+        "name": "Hooded Sweatshirt",
+        "category": "Sweatshirts",
+        "price": 34.99,
+        "colors": [
+            "Red",
+            "Green"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Cotton",
+            "Polyester"
+        ],
+        "gender": [
+            "Men",
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Loungewear"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/hoodedsweatshirt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/hoodedsweatshirt-1/315/472",
+            "https://picsum.photos/seed/hoodedsweatshirt-2/315/472",
+            "https://picsum.photos/seed/hoodedsweatshirt-3/315/472",
+            "https://picsum.photos/seed/hoodedsweatshirt-4/315/472"
+        ]
+    },
+    {
+        "name": "Knit Scarf",
+        "category": "Accessories",
+        "price": 24.99,
+        "colors": [
+            "Blue",
+            "Green"
+        ],
+        "sizes": [
+            "One Size"
+        ],
+        "material": [
+            "Wool"
+        ],
+        "gender": [
+            "Unisex"
+        ],
+        "use": [
+            "Casual",
+            "Winterwear"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/knitscarf-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/knitscarf-1/315/472",
+            "https://picsum.photos/seed/knitscarf-2/315/472",
+            "https://picsum.photos/seed/knitscarf-3/315/472",
+            "https://picsum.photos/seed/knitscarf-4/315/472"
+        ]
+    },
+    {
+        "name": "Slim Fit Trousers",
+        "category": "Pants",
+        "price": 49.99,
+        "colors": [
+            "Black",
+            "Gray"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Polyester",
+            "Viscose",
+            "Spandex"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": [
+            "Smart Casual",
+            "Business Casual"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/slimfittrousers-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/slimfittrousers-1/315/472",
+            "https://picsum.photos/seed/slimfittrousers-2/315/472",
+            "https://picsum.photos/seed/slimfittrousers-3/315/472",
+            "https://picsum.photos/seed/slimfittrousers-4/315/472"
+        ]
+    },
+    {
+        "name": "Linen Blazer",
+        "category": "Blazers",
+        "price": 79.99,
+        "colors": [
+            "Beige",
+            "Navy"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Linen"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": [
+            "Smart Casual",
+            "Business Casual"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/linenblazer-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/linenblazer-1/315/472",
+            "https://picsum.photos/seed/linenblazer-2/315/472",
+            "https://picsum.photos/seed/linenblazer-3/315/472",
+            "https://picsum.photos/seed/linenblazer-4/315/472"
+        ]
+    },
+    {
+        "name": "Printed Tote Bag",
+        "category": "Bags",
+        "price": 29.99,
+        "colors": [
+            "Blue",
+            "Green"
+        ],
+        "sizes": [
+            "One Size"
+        ],
+        "material": [
+            "Canvas"
+        ],
+        "gender": [
+            "Unisex"
+        ],
+        "use": [
+            "Casual",
+            "Travel"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/printedtotebag-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/printedtotebag-1/315/472",
+            "https://picsum.photos/seed/printedtotebag-2/315/472",
+            "https://picsum.photos/seed/printedtotebag-3/315/472",
+            "https://picsum.photos/seed/printedtotebag-4/315/472"
+        ]
+    },
+    {
+        "name": "Puffer Vest",
+        "category": "Vests",
+        "price": 79.99,
+        "colors": [
+            "Black",
+            "Blue"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Nylon",
+            "Polyester"
+        ],
+        "gender": [
+            "Men",
+            "Women"
+        ],
+        "use": [
+            "Outdoor",
+            "Sportswear"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/puffervest-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/puffervest-1/315/472",
+            "https://picsum.photos/seed/puffervest-2/315/472",
+            "https://picsum.photos/seed/puffervest-3/315/472",
+            "https://picsum.photos/seed/puffervest-4/315/472"
+        ]
+    },
+    {
+        "name": "Patterned Bucket Hat",
+        "category": "Hats",
+        "price": 19.99,
+        "colors": [
+            "Red",
+            "Green"
+        ],
+        "sizes": [
+            "One Size"
+        ],
+        "material": [
+            "Cotton"
+        ],
+        "gender": [
+            "Unisex"
+        ],
+        "use": [
+            "Casual",
+            "Beachwear"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/patternedbuckethat-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/patternedbuckethat-1/315/472",
+            "https://picsum.photos/seed/patternedbuckethat-2/315/472",
+            "https://picsum.photos/seed/patternedbuckethat-3/315/472",
+            "https://picsum.photos/seed/patternedbuckethat-4/315/472"
+        ]
+    },
+    {
+        "name": "Canvas Espadrilles",
+        "category": "Shoes",
+        "price": 29.99,
+        "colors": [
+            "Blue",
+            "Green"
+        ],
+        "sizes": [
+            "US 6",
+            "US 7",
+            "US 8",
+            "US 9"
+        ],
+        "material": [
+            "Canvas",
+            "Jute"
+        ],
+        "gender": [
+            "Men",
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Summerwear"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/canvasespadrilles-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/canvasespadrilles-1/315/472",
+            "https://picsum.photos/seed/canvasespadrilles-2/315/472",
+            "https://picsum.photos/seed/canvasespadrilles-3/315/472",
+            "https://picsum.photos/seed/canvasespadrilles-4/315/472"
+        ]
+    },
+    {
+        "name": "Retro Sunglasses",
+        "category": "Accessories",
+        "price": 14.99,
+        "colors": [
+            "Red",
+            "Blue"
+        ],
+        "sizes": [
+            "One Size"
+        ],
+        "material": [
+            "Plastic"
+        ],
+        "gender": [
+            "Unisex"
+        ],
+        "use": [
+            "Casual",
+            "Summerwear"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/retrosunglasses-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/retrosunglasses-1/315/472",
+            "https://picsum.photos/seed/retrosunglasses-2/315/472",
+            "https://picsum.photos/seed/retrosunglasses-3/315/472",
+            "https://picsum.photos/seed/retrosunglasses-4/315/472"
+        ]
+    },
+    {
+        "name": "Graphic T-Shirt",
+        "category": "T-Shirts",
+        "price": 24.99,
+        "colors": [
+            "Blue",
+            "Green"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Cotton"
+        ],
+        "gender": [
+            "Men",
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Streetwear"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/graphictshirt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/graphictshirt-1/315/472",
+            "https://picsum.photos/seed/graphictshirt-2/315/472",
+            "https://picsum.photos/seed/graphictshirt-3/315/472",
+            "https://picsum.photos/seed/graphictshirt-4/315/472"
+        ]
+    },
+    {
+        "name": "Cargo Shorts",
+        "category": "Shorts",
+        "price": 34.99,
+        "colors": [
+            "Green",
+            "Blue"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Cotton"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": [
+            "Casual",
+            "Outdoor"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/cargoshorts-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/cargoshorts-1/315/472",
+            "https://picsum.photos/seed/cargoshorts-2/315/472",
+            "https://picsum.photos/seed/cargoshorts-3/315/472",
+            "https://picsum.photos/seed/cargoshorts-4/315/472"
+        ]
+    },
+    {
+        "name": "Faux Leather Biker Jacket",
+        "category": "Jackets",
+        "price": 99.99,
+        "colors": [
+            "Black"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Polyurethane",
+            "Polyester"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": [
+            "Casual",
+            "Streetwear"
+        ],
+        "newIn": true,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/fauxleatherbikerjacket-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/fauxleatherbikerjacket-1/315/472",
+            "https://picsum.photos/seed/fauxleatherbikerjacket-2/315/472",
+            "https://picsum.photos/seed/fauxleatherbikerjacket-3/315/472",
+            "https://picsum.photos/seed/fauxleatherbikerjacket-4/315/472"
+        ]
+    },
+    {
+        "name": "Lace Trim Cami Top",
+        "category": "Tops",
+        "price": 29.99,
+        "colors": [
+            "White"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Cotton"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": [
+            "Casual",
+            "Summerwear"
+        ],
+        "newIn": false,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/lacetrimcamitop-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/lacetrimcamitop-1/315/472",
+            "https://picsum.photos/seed/lacetrimcamitop-2/315/472",
+            "https://picsum.photos/seed/lacetrimcamitop-3/315/472",
+            "https://picsum.photos/seed/lacetrimcamitop-4/315/472"
+        ]
+    },
+    {
+        "name": "Striped Polo Shirt",
+        "category": "Polos",
+        "price": 39.99,
+        "colors": [
+            "Blue",
+            "White"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Cotton"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": "Smart Casual",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/stripedpoloshirt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/stripedpoloshirt-1/315/472",
+            "https://picsum.photos/seed/stripedpoloshirt-2/315/472",
+            "https://picsum.photos/seed/stripedpoloshirt-3/315/472"
+        ]
+    },
+    {
+        "name": "Denim Jacket",
+        "category": "Jackets",
+        "price": 79.99,
+        "colors": [
+            "Denim Blue"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Denim"
+        ],
+        "gender": [
+            "Men",
+            "Women"
+        ],
+        "use": "Casual",
+        "newIn": false,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/denimjacket-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/denimjacket-1/315/472",
+            "https://picsum.photos/seed/denimjacket-2/315/472",
+            "https://picsum.photos/seed/denimjacket-3/315/472"
+        ]
+    },
+    {
+        "name": "Cable Knit Sweater",
+        "category": "Sweaters",
+        "price": 59.99,
+        "colors": [
+            "Gray"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Wool"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": "Winterwear",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/cableknitsweater-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/cableknitsweater-1/315/472",
+            "https://picsum.photos/seed/cableknitsweater-2/315/472",
+            "https://picsum.photos/seed/cableknitsweater-3/315/472"
+        ]
+    },
+    {
+        "name": "Cargo Pants",
+        "category": "Pants",
+        "price": 49.99,
+        "colors": [
+            "Black"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Cotton"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": "Streetwear",
+        "newIn": false,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/cargopants-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/cargopants-1/315/472",
+            "https://picsum.photos/seed/cargopants-2/315/472",
+            "https://picsum.photos/seed/cargopants-3/315/472"
+        ]
+    },
+    {
+        "name": "Ankle Boots",
+        "category": "Shoes",
+        "price": 89.99,
+        "colors": [
+            "Brown"
+        ],
+        "sizes": [
+            "US 7",
+            "US 8",
+            "US 9",
+            "US 10"
+        ],
+        "material": [
+            "Leather"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": "Casual",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/ankleboots-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/ankleboots-1/315/472",
+            "https://picsum.photos/seed/ankleboots-2/315/472",
+            "https://picsum.photos/seed/ankleboots-3/315/472"
+        ]
+    },
+    {
+        "name": "Printed T-Shirt",
+        "category": "T-Shirts",
+        "price": 24.99,
+        "colors": [
+            "Red",
+            "Black"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Cotton"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": "Casual",
+        "newIn": false,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/printedtshirt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/printedtshirt-1/315/472",
+            "https://picsum.photos/seed/printedtshirt-2/315/472",
+            "https://picsum.photos/seed/printedtshirt-3/315/472"
+        ]
+    },
+    {
+        "name": "Hooded Sweatshirt",
+        "category": "Sweatshirts",
+        "price": 49.99,
+        "colors": [
+            "Navy"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Cotton",
+            "Polyester"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": "Athleisure",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/hoodedsweatshirt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/hoodedsweatshirt-1/315/472",
+            "https://picsum.photos/seed/hoodedsweatshirt-2/315/472",
+            "https://picsum.photos/seed/hoodedsweatshirt-3/315/472"
+        ]
+    },
+    {
+        "name": "Printed Midi Skirt",
+        "category": "Skirts",
+        "price": 34.99,
+        "colors": [
+            "Yellow"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M"
+        ],
+        "material": [
+            "Polyester"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": "Casual",
+        "newIn": false,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/printedmidiskirt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/printedmidiskirt-1/315/472",
+            "https://picsum.photos/seed/printedmidiskirt-2/315/472",
+            "https://picsum.photos/seed/printedmidiskirt-3/315/472"
+        ]
+    },
+    {
+        "name": "Leather Loafers",
+        "category": "Shoes",
+        "price": 69.99,
+        "colors": [
+            "Black"
+        ],
+        "sizes": [
+            "US 6",
+            "US 7",
+            "US 8",
+            "US 9"
+        ],
+        "material": [
+            "Leather"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": "Smart Casual",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/leatherloafers-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/leatherloafers-1/315/472",
+            "https://picsum.photos/seed/leatherloafers-2/315/472",
+            "https://picsum.photos/seed/leatherloafers-3/315/472"
+        ]
+    },
+    {
+        "name": "Faux Leather Jacket",
+        "category": "Jackets",
+        "price": 89.99,
+        "colors": [
+            "Black"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Faux Leather"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": "Casual",
+        "newIn": false,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/fauxleatherjacket-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/fauxleatherjacket-1/315/472",
+            "https://picsum.photos/seed/fauxleatherjacket-2/315/472",
+            "https://picsum.photos/seed/fauxleatherjacket-3/315/472"
+        ]
+    },
+    {
+        "name": "V-Neck Sweater",
+        "category": "Sweaters",
+        "price": 44.99,
+        "colors": [
+            "Gray"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Cotton",
+            "Cashmere"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": "Casual",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/vnecksweater-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/vnecksweater-1/315/472",
+            "https://picsum.photos/seed/vnecksweater-2/315/472",
+            "https://picsum.photos/seed/vnecksweater-3/315/472"
+        ]
+    },
+    {
+        "name": "Printed Maxi Dress",
+        "category": "Dresses",
+        "price": 79.99,
+        "colors": [
+            "Red",
+            "White"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Polyester"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": "Summerwear",
+        "newIn": false,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/printedmaxidress-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/printedmaxidress-1/315/472",
+            "https://picsum.photos/seed/printedmaxidress-2/315/472",
+            "https://picsum.photos/seed/printedmaxidress-3/315/472"
+        ]
+    },
+    {
+        "name": "Cropped Trousers",
+        "category": "Pants",
+        "price": 49.99,
+        "colors": [
+            "Beige"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Cotton"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": "Casual",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/croppedtrousers-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/croppedtrousers-1/315/472",
+            "https://picsum.photos/seed/croppedtrousers-2/315/472",
+            "https://picsum.photos/seed/croppedtrousers-3/315/472"
+        ]
+    },
+    {
+        "name": "Leather Belt",
+        "category": "Accessories",
+        "price": 29.99,
+        "colors": [
+            "Brown",
+            "Black"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Leather"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": "Casual",
+        "newIn": false,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/leatherbelt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/leatherbelt-1/315/472",
+            "https://picsum.photos/seed/leatherbelt-2/315/472",
+            "https://picsum.photos/seed/leatherbelt-3/315/472"
+        ]
+    },
+    {
+        "name": "Striped Blouse",
+        "category": "Blouses",
+        "price": 34.99,
+        "colors": [
+            "Blue",
+            "White"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Cotton"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": "Casual",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/stripedblouse-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/stripedblouse-1/315/472",
+            "https://picsum.photos/seed/stripedblouse-2/315/472",
+            "https://picsum.photos/seed/stripedblouse-3/315/472"
+        ]
+    },
+    {
+        "name": "Hiking Boots",
+        "category": "Shoes",
+        "price": 99.99,
+        "colors": [
+            "Black"
+        ],
+        "sizes": [
+            "US 7",
+            "US 8",
+            "US 9",
+            "US 10"
+        ],
+        "material": [
+            "Leather",
+            "Rubber"
+        ],
+        "gender": [
+            "Men",
+            "Women"
+        ],
+        "use": "Outdoor",
+        "newIn": false,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/hikingboots-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/hikingboots-1/315/472",
+            "https://picsum.photos/seed/hikingboots-2/315/472",
+            "https://picsum.photos/seed/hikingboots-3/315/472"
+        ]
+    },
+    {
+        "name": "Twill Chinos",
+        "category": "Pants",
+        "price": 44.99,
+        "colors": [
+            "Khaki"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Cotton"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": "Casual",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/twillchinos-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/twillchinos-1/315/472",
+            "https://picsum.photos/seed/twillchinos-2/315/472",
+            "https://picsum.photos/seed/twillchinos-3/315/472"
+        ]
+    },
+    {
+        "name": "Cropped Denim Jacket",
+        "category": "Jackets",
+        "price": 69.99,
+        "colors": [
+            "Light Blue"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Denim"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": "Casual",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/croppeddenimjacket-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/croppeddenimjacket-1/315/472",
+            "https://picsum.photos/seed/croppeddenimjacket-2/315/472",
+            "https://picsum.photos/seed/croppeddenimjacket-3/315/472"
+        ]
+    },
+    {
+        "name": "Hooded Parka",
+        "category": "Jackets",
+        "price": 89.99,
+        "colors": [
+            "Olive Green"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Polyester",
+            "Cotton"
+        ],
+        "gender": [
+            "Men",
+            "Women"
+        ],
+        "use": "Winterwear",
+        "newIn": false,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/hoodedparka-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/hoodedparka-1/315/472",
+            "https://picsum.photos/seed/hoodedparka-2/315/472",
+            "https://picsum.photos/seed/hoodedparka-3/315/472"
+        ]
+    },
+    {
+        "name": "Slim Fit Jeans",
+        "category": "Jeans",
+        "price": 49.99,
+        "colors": [
+            "Dark Blue"
+        ],
+        "sizes": [
+            "28W x 30L",
+            "30W x 32L",
+            "32W x 32L",
+            "34W x 34L"
+        ],
+        "material": [
+            "Denim"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": "Casual",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/slimfitjeans-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/slimfitjeans-1/315/472",
+            "https://picsum.photos/seed/slimfitjeans-2/315/472",
+            "https://picsum.photos/seed/slimfitjeans-3/315/472"
+        ]
+    },
+    {
+        "name": "Leather Biker Jacket",
+        "category": "Jackets",
+        "price": 129.99,
+        "colors": [
+            "Black"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Leather"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": "Casual",
+        "newIn": false,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/leatherbikerjacket-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/leatherbikerjacket-1/315/472",
+            "https://picsum.photos/seed/leatherbikerjacket-2/315/472",
+            "https://picsum.photos/seed/leatherbikerjacket-3/315/472"
+        ]
+    },
+    {
+        "name": "Floral Midi Dress",
+        "category": "Dresses",
+        "price": 69.99,
+        "colors": [
+            "Navy",
+            "Pink"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Polyester"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": "Summerwear",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/floralmididress-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/floralmididress-1/315/472",
+            "https://picsum.photos/seed/floralmididress-2/315/472",
+            "https://picsum.photos/seed/floralmididress-3/315/472"
+        ]
+    },
+    {
+        "name": "Crew Neck Sweater",
+        "category": "Sweaters",
+        "price": 49.99,
+        "colors": [
+            "Black",
+            "Gray"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Cotton",
+            "Wool"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": "Casual",
+        "newIn": false,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/crewnecksweater-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/crewnecksweater-1/315/472",
+            "https://picsum.photos/seed/crewnecksweater-2/315/472",
+            "https://picsum.photos/seed/crewnecksweater-3/315/472"
+        ]
+    },
+    {
+        "name": "Knit Beanie",
+        "category": "Accessories",
+        "price": 19.99,
+        "colors": [
+            "Black",
+            "Gray",
+            "Navy"
+        ],
+        "sizes": [
+            "One Size"
+        ],
+        "material": [
+            "Acrylic"
+        ],
+        "gender": [
+            "Unisex"
+        ],
+        "use": "Winter Accessories",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/knitbeanie-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/knitbeanie-1/315/472",
+            "https://picsum.photos/seed/knitbeanie-2/315/472",
+            "https://picsum.photos/seed/knitbeanie-3/315/472"
+        ]
+    },
+    {
+        "name": "Striped Oxford Shirt",
+        "category": "Shirts",
+        "price": 49.99,
+        "colors": [
+            "Blue",
+            "White"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Cotton"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": "Smart Casual",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/stripedoxfordshirt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/stripedoxfordshirt-1/315/472",
+            "https://picsum.photos/seed/stripedoxfordshirt-2/315/472",
+            "https://picsum.photos/seed/stripedoxfordshirt-3/315/472"
+        ]
+    },
+    {
+        "name": "Pleated Skirt",
+        "category": "Skirts",
+        "price": 39.99,
+        "colors": [
+            "Black"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M"
+        ],
+        "material": [
+            "Polyester"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": "Casual",
+        "newIn": false,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/pleatedskirt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/pleatedskirt-1/315/472",
+            "https://picsum.photos/seed/pleatedskirt-2/315/472",
+            "https://picsum.photos/seed/pleatedskirt-3/315/472"
+        ]
+    },
+    {
+        "name": "Printed Silk Scarf",
+        "category": "Accessories",
+        "price": 29.99,
+        "colors": [
+            "Red",
+            "Gold"
+        ],
+        "sizes": [
+            "One Size"
+        ],
+        "material": [
+            "Silk"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": "Accessories",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/printedsilkscarf-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/printedsilkscarf-1/315/472",
+            "https://picsum.photos/seed/printedsilkscarf-2/315/472",
+            "https://picsum.photos/seed/printedsilkscarf-3/315/472"
+        ]
+    },
+    {
+        "name": "Puffer Vest",
+        "category": "Vests",
+        "price": 59.99,
+        "colors": [
+            "Red",
+            "Black"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Polyester"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": "Outdoor",
+        "newIn": false,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/puffervest-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/puffervest-1/315/472",
+            "https://picsum.photos/seed/puffervest-2/315/472",
+            "https://picsum.photos/seed/puffervest-3/315/472"
+        ]
+    },
+    {
+        "name": "Classic Leather Belt",
+        "category": "Accessories",
+        "price": 39.99,
+        "colors": [
+            "Brown",
+            "Black"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Leather"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": "Casual",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/classicleatherbelt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/classicleatherbelt-1/315/472",
+            "https://picsum.photos/seed/classicleatherbelt-2/315/472",
+            "https://picsum.photos/seed/classicleatherbelt-3/315/472"
+        ]
+    },
+    {
+        "name": "Hooded Windbreaker",
+        "category": "Jackets",
+        "price": 69.99,
+        "colors": [
+            "Navy"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "material": [
+            "Polyester"
+        ],
+        "gender": [
+            "Men"
+        ],
+        "use": "Outdoor",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/hoodedwindbreaker-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/hoodedwindbreaker-1/315/472",
+            "https://picsum.photos/seed/hoodedwindbreaker-2/315/472",
+            "https://picsum.photos/seed/hoodedwindbreaker-3/315/472"
+        ]
+    },
+    {
+        "name": "High Waisted Jeans",
+        "category": "Jeans",
+        "price": 54.99,
+        "colors": [
+            "Medium Blue"
+        ],
+        "sizes": [
+            "24W x 30L",
+            "26W x 32L",
+            "28W x 32L",
+            "30W x 34L"
+        ],
+        "material": [
+            "Denim"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": "Casual",
+        "newIn": false,
+        "inStock": true,
+        "popularity": 3,
+        "previewImg": "https://picsum.photos/seed/highwaistedjeans-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/highwaistedjeans-1/315/472",
+            "https://picsum.photos/seed/highwaistedjeans-2/315/472",
+            "https://picsum.photos/seed/highwaistedjeans-3/315/472"
+        ]
+    },
+    {
+        "name": "Leather Crossbody Bag",
+        "category": "Bags",
+        "price": 79.99,
+        "colors": [
+            "Brown"
+        ],
+        "sizes": [
+            "One Size"
+        ],
+        "material": [
+            "Leather"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": "Accessories",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/leathercrossbodybag-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/leathercrossbodybag-1/315/472",
+            "https://picsum.photos/seed/leathercrossbodybag-2/315/472",
+            "https://picsum.photos/seed/leathercrossbodybag-3/315/472"
+        ]
+    },
+    {
+        "name": "Pleated Midi Skirt",
+        "category": "Skirts",
+        "price": 59.99,
+        "colors": [
+            "Yellow"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "material": [
+            "Polyester"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": "Smart Casual",
+        "newIn": true,
+        "inStock": true,
+        "popularity": 1,
+        "previewImg": "https://picsum.photos/seed/pleatedmidiskirt-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/pleatedmidiskirt-1/315/472",
+            "https://picsum.photos/seed/pleatedmidiskirt-2/315/472",
+            "https://picsum.photos/seed/pleatedmidiskirt-3/315/472"
+        ]
+    },
+    {
+        "name": "Suede Ankle Boots",
+        "category": "Shoes",
+        "price": 79.99,
+        "colors": [
+            "Tan"
+        ],
+        "sizes": [
+            "US 6",
+            "US 7",
+            "US 8",
+            "US 9"
+        ],
+        "material": [
+            "Suede"
+        ],
+        "gender": [
+            "Women"
+        ],
+        "use": "Smart Casual",
+        "newIn": false,
+        "inStock": true,
+        "popularity": 2,
+        "previewImg": "https://picsum.photos/seed/suedeankleboots-preview/224/336",
+        "images": [
+            "https://picsum.photos/seed/suedeankleboots-1/315/472",
+            "https://picsum.photos/seed/suedeankleboots-2/315/472",
+            "https://picsum.photos/seed/suedeankleboots-3/315/472"
+        ]
+    }
+]

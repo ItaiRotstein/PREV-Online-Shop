@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./assets/fonts/inter/Inter-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./assets/fonts/Merriweather/Merriweather-Regular.ttf);
+  }
+}
+
+.arrow-up {
+  position: absolute;
+  left: 0px;
+  transform: translate3d(75px, 0px, 0px);
+  width: 0;
+  height: 0;
+  border-bottom: 0.625rem solid #000000;
+  border-left: 0.625rem solid transparent;
+  border-right: 0.625rem solid transparent;
+  margin-top: -0.625rem;
+}
+
+.drawer-shadow {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px -2px, rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 1px 8px 0px;
+}
