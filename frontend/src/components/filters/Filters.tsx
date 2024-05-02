@@ -1,5 +1,7 @@
 import { Size } from './Size';
 import { Gender } from './Gender';
+import { Material } from './Material';
+import { Category } from './Category';
 
 export const Filters = () => {
 
@@ -26,6 +28,8 @@ export const Filters = () => {
             </div>
             <Size />
             <Gender />
+            <Material />
+            <Category />
         </aside>
     );
 };
