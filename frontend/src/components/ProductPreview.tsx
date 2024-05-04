@@ -4,11 +4,13 @@ type Props = {
     prod: Product;
 };
 
-const ProductPreview = ({ prod }: Props) => {
+export const ProductPreview = ({ prod }: Props) => {
 
     return (
         <div className="w-[49%] md:w-[32%] xl:w-[24%] px-1 md:px-2 rounded-sm overflow-hidden shadow-sm">
-            <img className="block w-full h-auto aspect-[2/3]" src={prod.previewImg} />
+            <img className="block w-full h-auto aspect-[2/3]"
+                src={prod.previewImg}
+            />
             <div className="py-4 max-w-40 sm:max-w-52 md:max-w-56">
                 <p className="font-bold md:text-xl mb-2 truncate">
                     {prod.name}
@@ -20,4 +22,3 @@ const ProductPreview = ({ prod }: Props) => {
         </div>
     );
 };
-export default ProductPreview;

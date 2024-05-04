@@ -41,7 +41,6 @@ const AppContext = ({ children }: Props) => {
         byRating: 0,
         searchQuery: '',
         itemsPerPage: 20,
-        pageNum: 0,
         isShowFilters: false,
     });
 
@@ -64,19 +63,3 @@ export const AppState = () => {
     return useContext(ShoppingCart);
 };
 
-
-// import { faker } from '@faker-js/faker';
-// faker.seed(99);
-// const items = [...Array(100)].map(() => (
-//     {
-//         id: faker.string.uuid(),
-//         name: faker.commerce.productName(),
-//         price: faker.commerce.price(),
-//         image: faker.image.url(),
-//         fastDelivery: faker.datatype.boolean(),
-//         inStock: faker.helpers.arrayElement([0, 3, 5, 6, 7]),
-//         rating: faker.helpers.arrayElement([1, 2, 3, 4, 5]),
-//         qty: ''
-//     }
-// ));
-// console.log(items);

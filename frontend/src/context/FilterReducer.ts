@@ -7,7 +7,6 @@ const initialState = {
     byRating: 0,
     searchQuery: '',
     itemsPerPage: 20,
-    pageNum: 0,
     isShowFilters: false,
 };
 
@@ -26,9 +25,7 @@ const FilterReducer = (state: FilterState, action: FilterActions) => {
         case 'CLEAR_FILTERS':
             return initialState;
         case 'SET_ITEMS_PER_PAGE':
-            return { ...state, itemsPerPage: action.payload };
-        case 'SET_PAGE_NUM':
-            return { ...state, pageNum: action.payload };
+            return { ...state, itemsPerPage: state.itemsPerPage + 20 };
         case 'SET_OPEN_FILTERS':
             return { ...state, isShowFilters: state.isShowFilters = true };
         case 'SET_CLOSE_FILTERS':

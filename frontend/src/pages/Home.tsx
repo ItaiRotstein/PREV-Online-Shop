@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Spinner from '../components/Spinner';
 
 import { AppState } from '../context/AppContext';
 
 import productService from '../services/productService';
 
-import ProductPreview from '../components/ProductPreview';
-import Pagination from '../components/Pagination';
+import { ProductPreview } from '../components/ProductPreview';
 import Footer from '../components/Footer';
 import { Navbar } from '../components/navbar/Navbar';
 import { Filters } from '../components/filters/Filters';
@@ -14,10 +13,15 @@ import HomeHeader from '../components/HomeHeader';
 
 export const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isFetchingMore, setIsFetchingMore] = useState(false);
+
+  const scrollRef = useRef<null | HTMLDivElement>(null);
 
   const {
-    productState: { products },
     filterState,
+    filterState: { itemsPerPage },
+    filterDispatch,
+    productState: { products, productsCount },
     productDispatch,
   } = AppState();
 
@@ -36,33 +40,48 @@ export const Home = () => {
       } catch (error) {
         console.log("Error fetching data", error);
       } finally {
+        setIsFetchingMore(false);
         setIsLoading(false);
       }
     };
     getProducts();
   }, [filterState]);
 
-  if (isLoading) return <Spinner isLoading={isLoading} />;
+  useEffect(() => {
+    window.addEventListener('scroll', handleScrollToBottom);
+    return (() => {
+      window.removeEventListener('scroll', handleScrollToBottom);
+    });
+  });
+
+  function handleScrollToBottom() {
+
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight
+      && (itemsPerPage < productsCount)
+      && !isFetchingMore) {
+      setIsFetchingMore(true);
+      setIsLoading(true);
+      filterDispatch({
+        type: 'SET_ITEMS_PER_PAGE'
+      });
+    }
+  }
 
   return (
-    <div>
+    <div >
       <Navbar />
-      <div>
+      <div >
         <main className='flex relative mx-auto xl:max-w-[1280px]'>
-          
-            <Filters />
-         
-          <div className='lg:w-3/4 xl:w-4/5 flex flex-wrap justify-center px-1 md:px-2  mt-3 lg:mt-0'>
-            
-              <HomeHeader />
-            
+          <Filters />
+          <div ref={scrollRef} className='lg:w-3/4 xl:w-4/5 flex flex-wrap justify-center px-1 md:px-2  mt-3 lg:mt-0'>
+            <HomeHeader />
             {products.map(prod => (
               <ProductPreview prod={{ ...prod }} key={prod._id} />
             ))}
           </div>
         </main>
       </div>
-      <Pagination />
+      {isLoading && <Spinner isLoading={isLoading} />}
       <Footer />
     </div>
   );

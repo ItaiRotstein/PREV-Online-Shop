@@ -12,7 +12,6 @@ const getProducts = asyncHandler(async (req, res) => {
     byFastDelivery,
     byRating,
     itemsPerPage,
-    pageNum,
     searchQuery
   } = req.query;
 
@@ -20,7 +19,7 @@ const getProducts = asyncHandler(async (req, res) => {
     {
       $facet: {
         metadata: [{ $count: 'totalCount' }],
-        data: [{ $skip: +pageNum * +itemsPerPage }, { $limit: +itemsPerPage }],
+        data: [{ $limit: +itemsPerPage }],
       }
     },
   ];

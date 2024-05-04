@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Price Range */
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  background-color: white;
+  padding: 8px;
+  border: solid 2px #c7c5c5;
+  outline: solid 3px black;
+  outline-offset: -14px;
+  cursor: pointer;
+  /* @apply bg-green-600; */
+  /* @apply w-6 h-6 appearance-none pointer-events-auto; */
+}
+
 @layer base {
 
   @font-face {
