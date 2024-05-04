@@ -37,7 +37,11 @@ const AppContext = ({ children }: Props) => {
     const [filterState, filterDispatch] = useReducer(FilterReducer, {
         byStock: false,
         byFastDelivery: false,
-        sort: '',
+        sort: {
+            byPrice: '',
+            byAlphabet: false,
+            byPopularity: false,
+        },
         byRating: 0,
         searchQuery: '',
         itemsPerPage: 20,

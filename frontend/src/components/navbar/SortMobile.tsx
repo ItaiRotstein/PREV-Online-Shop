@@ -1,17 +1,25 @@
 import { useState } from 'react';
 
 import { BiSortAlt2 } from "react-icons/bi";
+import { AppState } from '../../context/AppContext';
+import { FilterActions } from '../../types/Filter';
 
 export const SortMobile = () => {
     const [isSortMenuShow, setSortMenuShow] = useState<boolean>(false);
     const [activeMenuIdx, setActiveMenuIdx] = useState<number | null>(null);
 
-    const sortList = [
-        { title: 'Most Relevant' },
-        { title: 'Most Popular' },
-        { title: 'Alphabetical' },
-        { title: 'Price: Low - High' },
-        { title: 'Price: High - Low' },
+    const {
+        filterDispatch,
+    } = AppState();
+    type SortList = {
+        title: string;
+        dispatch: FilterActions;
+    };
+    const sortList: SortList[] = [
+        { title: 'Most Popular', dispatch: {type: 'SORT_BY_POPULARITY'}},
+        { title: 'Alphabetical', dispatch: {type: 'SORT_BY_ALPHABET'}},
+        { title: 'Price: Low - High', dispatch: { type: 'SORT_BY_PRICE', payload: 'lowtohigh' } },
+        { title: 'Price: High - Low', dispatch: { type: 'SORT_BY_PRICE', payload: 'hightolow' } },
     ];
 
     return (
@@ -25,11 +33,14 @@ export const SortMobile = () => {
                 <div className='absolute translate-x-30 translate-y-[160px] z-10' onClick={(e) => e.stopPropagation()}>
                     <span className='arrow-up'></span>
                     <ul className=' bg-white border-t-4 border-black drawer-shadow text-left'>
-                        {sortList.map((item, idx) =>
+                        {sortList.map((sortBy, idx) =>
                             <li
-                                key={item + idx.toString()}
-                                className={`flex gap-3 py-[14px] ${activeMenuIdx === idx ? 'bg-lime-100' : 'bg-white'} hover:brightness-95`}
-                                onClick={() => setActiveMenuIdx(idx)}
+                                key={sortBy + idx.toString()}
+                                className={`flex gap-3 py-[14px] ${activeMenuIdx === idx ? 'bg-gray-200' : 'bg-white'} hover:brightness-95`}
+                                onClick={() => {
+                                    setActiveMenuIdx(idx);
+                                    filterDispatch(sortBy.dispatch);
+                                }}
                             >
                                 <div className='w-4 px-1'>
                                     {activeMenuIdx === idx && (
@@ -39,7 +50,7 @@ export const SortMobile = () => {
                                     )}
                                 </div>
                                 <span className='px-4'>
-                                    {item.title}
+                                    {sortBy.title}
                                 </span>
                             </li>
                         )}

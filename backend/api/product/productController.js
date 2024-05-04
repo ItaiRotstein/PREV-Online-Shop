@@ -5,16 +5,19 @@ const Product = require("../../models/productModel");
 // @route   GET /api/products
 // @access  Private
 const getProducts = asyncHandler(async (req, res) => {
-
+console.log(req.query);
   const {
-    sort,
+    sort: {
+      byPrice, 
+      byAlphabet,
+      byPopularity
+    },
     byStock,
     byFastDelivery,
     byRating,
     itemsPerPage,
     searchQuery
   } = req.query;
-
   const pipline = [
     {
       $facet: {
@@ -23,6 +26,19 @@ const getProducts = asyncHandler(async (req, res) => {
       }
     },
   ];
+
+  if (byPrice) {
+    const sortOrder = byPrice === 'lowtohigh' ? 1 : -1;
+    pipline.unshift({ $sort: { price: sortOrder } });
+  }
+
+  if (byAlphabet === 'true') {
+    pipline.unshift({ $sort: { name: 1 } });
+  }
+
+  if (byPopularity === 'true') {
+    pipline.unshift({ $sort: { popularity: 1 } });
+  }
 
   const products = await Product.aggregate(pipline);
 
