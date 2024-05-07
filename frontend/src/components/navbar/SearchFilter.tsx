@@ -16,7 +16,7 @@ export const SearchFilter = memo(({ searchQuery, filterDispatch }: Props) => {
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={(e) => filterDispatch({
-                    type: 'FILTER_BY_SEARCH',
+                    type: 'FILTER_BY_SEARCH_QUERY',
                     payload: e.target.value
                 })}
             />

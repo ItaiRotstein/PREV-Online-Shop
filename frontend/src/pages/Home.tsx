@@ -2,9 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Spinner from '../components/Spinner';
 
 import { AppState } from '../context/AppContext';
-
 import productService from '../services/productService';
-
 import { ProductPreview } from '../components/ProductPreview';
 import Footer from '../components/Footer';
 import { Navbar } from '../components/navbar/Navbar';
@@ -19,23 +17,19 @@ export const Home = () => {
 
   const {
     filterState,
-    filterState: { itemsPerPage },
+    filterState: { itemsPerFetch },
     filterDispatch,
-    productState: { products, productsCount },
+    productState: { products, totalProductsCount },
     productDispatch,
   } = AppState();
 
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const productsData = await productService.getProducts(filterState);
+        const data = await productService.getProducts(filterState);
         productDispatch({
-          type: 'GET_PRODUCTS',
-          payload: productsData.data
-        });
-        productDispatch({
-          type: 'GET_PRODUCTS_COUNT',
-          payload: productsData.metadata.totalCount
+          type: 'GET_PRODUCTS_DATA',
+          payload: data
         });
       } catch (error) {
         console.log("Error fetching data", error);
@@ -56,13 +50,16 @@ export const Home = () => {
 
   function handleScrollToBottom() {
 
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight
-      && (itemsPerPage < productsCount)
-      && !isFetchingMore) {
+    if (
+      (window.innerHeight + window.scrollY) >= document.body.offsetHeight
+      && (itemsPerFetch < totalProductsCount)
+      && !isFetchingMore
+    ) {
       setIsFetchingMore(true);
       setIsLoading(true);
       filterDispatch({
-        type: 'SET_ITEMS_PER_PAGE'
+        type: 'SET_ITEMS_PER_FETCH',
+        payload: itemsPerFetch
       });
     }
   }

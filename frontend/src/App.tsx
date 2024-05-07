@@ -6,12 +6,10 @@ import Cart from './pages/Cart';
 function App() {
   return (
     <BrowserRouter>
-      {/* <div> */}
         <Routes>
           <Route path='/cart' element={<Cart />} />
           <Route path='/' element={<Home />} />
         </Routes>
-      {/* </div> */}
     </BrowserRouter>
   );
 }

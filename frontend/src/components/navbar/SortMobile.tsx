@@ -6,18 +6,18 @@ import { FilterActions } from '../../types/Filter';
 
 export const SortMobile = () => {
     const [isSortMenuShow, setSortMenuShow] = useState<boolean>(false);
-    const [activeMenuIdx, setActiveMenuIdx] = useState<number | null>(null);
+    const [activeMenuIdx, setActiveMenuIdx] = useState<number>(0);
 
     const {
         filterDispatch,
     } = AppState();
-    type SortList = {
+    type SortByList = {
         title: string;
         dispatch: FilterActions;
     };
-    const sortList: SortList[] = [
-        { title: 'Most Popular', dispatch: {type: 'SORT_BY_POPULARITY'}},
-        { title: 'Alphabetical', dispatch: {type: 'SORT_BY_ALPHABET'}},
+    const sortByList: SortByList[] = [
+        { title: 'Most Popular', dispatch: { type: 'SORT_BY_POPULARITY' } },
+        { title: 'Alphabetical', dispatch: { type: 'SORT_BY_ALPHABET' } },
         { title: 'Price: Low - High', dispatch: { type: 'SORT_BY_PRICE', payload: 'lowtohigh' } },
         { title: 'Price: High - Low', dispatch: { type: 'SORT_BY_PRICE', payload: 'hightolow' } },
     ];
@@ -26,14 +26,18 @@ export const SortMobile = () => {
         <button
             className='relative w-1/2 flex justify-center items-center gap-1 border-b border-r border-gray-300 p-4 font-bold text-sm'
             onClick={() => setSortMenuShow(!isSortMenuShow)}
+            onBlur={() => setSortMenuShow(false)}
         >
-            <BiSortAlt2 className='w-5 h-5' />
-            <span>Sort</span>
+            {!isSortMenuShow && <BiSortAlt2 className='w-5 h-5' />}
+            {isSortMenuShow ? 'Close' : 'Sort'}
             {isSortMenuShow &&
-                <div className='absolute translate-x-30 translate-y-[160px] z-10' onClick={(e) => e.stopPropagation()}>
+                <div
+                    className='absolute translate-x-30 translate-y-[135px] z-10'
+                    onClick={(e) => e.stopPropagation()}
+                >
                     <span className='arrow-up'></span>
                     <ul className=' bg-white border-t-4 border-black drawer-shadow text-left'>
-                        {sortList.map((sortBy, idx) =>
+                        {sortByList.map((sortBy, idx) =>
                             <li
                                 key={sortBy + idx.toString()}
                                 className={`flex gap-3 py-[14px] ${activeMenuIdx === idx ? 'bg-gray-200' : 'bg-white'} hover:brightness-95`}

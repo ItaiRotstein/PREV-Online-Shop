@@ -11,7 +11,8 @@ const getProducts = async (filterState: FilterState) => {
         params: filterState
     };
     const response = await axios.get(`${API_URL}/products`, config);
-    return await response.data.products;
+    
+    return await response.data;
 };
 
 const productService = {
