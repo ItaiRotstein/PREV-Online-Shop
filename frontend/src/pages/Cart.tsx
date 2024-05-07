@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import { AppState } from '../context/AppContext';
-import CartItem from '../components/CartItem';
-import { Link } from 'react-router-dom';
-import logo from '../assets/img/logo prev.png';
+import { AppState } from "../context/AppContext";
+import CartItem from "../components/CartItem";
+import { Link } from "react-router-dom";
+import logo from "../assets/img/logo prev.png";
 
 const Cart = () => {
 
@@ -25,14 +25,14 @@ const Cart = () => {
       </header>
       <div className="flex flex-col">
         <section className="text-center border-b border-gray-300 mx-4 md:px-8 lg:px-24 pb-2">
-          <h2 className='md:text-2xl'>Cart <span className='text-gray-500'>({cart.length})</span></h2>
-          <p className='mt-1 mb-4'>Total: ${total}</p>
-          <div className='w-52s text-center'>
-            <button className='py-1 '>Proceed to Check Out</button>
+          <h2 className="md:text-2xl">Cart <span className="text-gray-500">({cart.length})</span></h2>
+          <p className="mt-1 mb-4">Total: ${total}</p>
+          <div className="w-52s text-center">
+            <button className="py-1 ">Proceed to Check Out</button>
           </div>
         </section>
         <section className="mx-4 my-4">
-          {cart.length === 0 && <h1 className='text-3xl text-center'>Yout Cart is Empty...</h1>}
+          {cart.length === 0 && <h1 className="text-3xl text-center">Yout Cart is Empty...</h1>}
           {cart.length > 0 &&
             <ul className="w-full text-xs md:text-base text-gray-900 rounded-lg">
               {cart.map(product => (
@@ -45,8 +45,8 @@ const Cart = () => {
             </ul>
           }
         </section>
-        <div className='text-center'>
-          <Link to='/' className='max-w-36 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+        <div className="text-center">
+          <Link to="/" className="max-w-36 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             Back to Store
           </Link>
         </div>

@@ -1,5 +1,5 @@
-import { memo, useEffect, useRef } from 'react';
-import { AppState } from '../../context/AppContext';
+import { memo, useEffect, useRef } from "react";
+import { AppState } from "../../context/AppContext";
 
 import { IoClose } from "react-icons/io5";
 
@@ -21,17 +21,17 @@ export const SearchDrawer = memo(({ isSearchDrawerOpen, setSearchDrawerOpen }: P
     });
 
     return (
-        <div className={`fixed ${isSearchDrawerOpen ? ' right-0' : 'block -right-full'} shadow-xlg w-[92%] h-full transition-all duration-500 z-20 bg-white text-black`}>
+        <div className={`fixed ${isSearchDrawerOpen ? " right-0" : "block -right-full"} shadow-xlg w-[92%] h-full transition-all duration-500 z-20 bg-white text-black`}>
             <div className="relative md:flex grow items-center justify-between md:w-auto" id="navbar-search">
                 <input
                     type="text"
                     id="search-navbar"
                     ref={inputRef}
-                    className="w-full p-2 text-sm text-gray-900 rounded-sm bg-gray-50 outline-none focus:ring-2  focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="w-full p-2 text-sm text-gray-900 rounded-sm bg-gray-50 outline-none focus:ring-2  focus:ring-blue-500"
                     placeholder="Search..."
                     value={searchQuery}
                     onChange={(e) => filterDispatch({
-                        type: 'FILTER_BY_SEARCH_QUERY',
+                        type: "FILTER_BY_SEARCH_QUERY",
                         payload: e.target.value
                     })}
                 />
@@ -42,7 +42,7 @@ export const SearchDrawer = memo(({ isSearchDrawerOpen, setSearchDrawerOpen }: P
                 </div>
             </div>
             <IoClose
-                className={`text-white absolute -left-8 top-2 w-6 h-7 cursor-pointer transition-all ${isSearchDrawerOpen ? 'opacity-100' : 'opacity-0'}`}
+                className={`text-white absolute -left-8 top-2 w-6 h-7 cursor-pointer transition-all ${isSearchDrawerOpen ? "opacity-100" : "opacity-0"}`}
                 onClick={() => setSearchDrawerOpen(false)}
             />
         </div>

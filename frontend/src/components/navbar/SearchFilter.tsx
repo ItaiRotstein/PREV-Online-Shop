@@ -1,5 +1,5 @@
-import { memo } from 'react';
-import { FilterActions } from '../../types/Filter';
+import { memo } from "react";
+import { FilterActions } from "../../types/Filter";
 
 type Props = {
     searchQuery: string;
@@ -12,11 +12,11 @@ export const SearchFilter = memo(({ searchQuery, filterDispatch }: Props) => {
             <input
                 type="text"
                 id="search-navbar"
-                className="w-full p-2 text-sm text-gray-900 rounded-sm bg-gray-50 outline-none focus:ring-2  focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="w-full p-2 text-sm text-gray-900 rounded-sm bg-gray-50 outline-none focus:ring-2  focus:ring-blue-500"
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={(e) => filterDispatch({
-                    type: 'FILTER_BY_SEARCH_QUERY',
+                    type: "FILTER_BY_SEARCH_QUERY",
                     payload: e.target.value
                 })}
             />

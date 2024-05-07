@@ -1,12 +1,12 @@
-import { ReactNode, createContext, useContext, useReducer } from 'react';
+import { ReactNode, createContext, useContext, useReducer } from "react";
 
-import ProductReducer from './ProductReducer';
-import CartReducer from './CartReducer';
-import FilterReducer from './FilterReducer';
+import ProductReducer from "./ProductReducer";
+import CartReducer from "./CartReducer";
+import FilterReducer from "./FilterReducer";
 
-import { Product, ProductActions, ProductState } from '../types/Product';
-import { CartActions } from '../types/Cart';
-import { FilterActions, FilterState } from '../types/Filter';
+import { Product, ProductActions, ProductState } from "../types/Product";
+import { CartActions } from "../types/Cart";
+import { FilterActions, FilterState } from "../types/Filter";
 
 type Props = {
     children: ReactNode;
@@ -66,10 +66,10 @@ const AppContext = ({ children }: Props) => {
     const [filterState, filterDispatch] = useReducer(FilterReducer, {
         byInStock: false,
         byNewIn: false,
-        searchQuery: '',
+        searchQuery: "",
         itemsPerFetch: 20,
         sort: {
-            byPrice: '',
+            byPrice: "",
             byAlphabet: false,
             byPopularity: true,
         },

@@ -30,17 +30,17 @@ export const Price = () => {
 
     return (
         <>
-            <div className='py-2 border-b border-gray-300'>
+            <div className="py-2 border-b border-gray-300">
                 <div
-                    className='flex justify-between items-center text-sm font-bold cursor-pointer'
+                    className="flex justify-between items-center text-sm font-bold cursor-pointer"
                     onClick={() => setMenuShow(!iseMenuShow)}
                 >
                     Price
                     {iseMenuShow ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 </div>
-                <div className={`${iseMenuShow ? 'h-[90px] py-2' : 'h-0'} transition-all duration-300 overflow-hidden font-normal`}>
-                    <div className='text-center pb-4 text-sm'>
-                        Price Range: <span className='font-bold'>${minValue} - ${maxValue}</span>
+                <div className={`${iseMenuShow ? "h-[90px] py-2" : "h-0"} transition-all duration-300 overflow-hidden font-normal`}>
+                    <div className="text-center pb-4 text-sm">
+                        Price Range: <span className="font-bold">${minValue} - ${maxValue}</span>
                     </div>
 
                     <div className="mb-4">
@@ -72,9 +72,9 @@ export const Price = () => {
                                 className="range-max absolute w-full -top-1 h-1 bg-transparent appearance-none pointer-events-none"
                             />
                         </div>
-                        <div className='flex justify-between pt-4 font-medium text-[0.9rem]'>
+                        <div className="flex justify-between pt-4 font-medium text-[0.9rem]">
                             <span> ${min}</span>
-                            <span className='ms'> ${max}</span>
+                            <span className="ms"> ${max}</span>
                         </div>
                     </div>
                 </div>

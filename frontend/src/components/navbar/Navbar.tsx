@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import { OffCanvas } from '../OffCanvas';
-import { SearchDrawer } from './SearchDrawer';
-import { FiltersMobile } from '../filters-mobile/FiltersMobile';
-import { SortMobile } from './SortMobile';
-import { NavbarUpper } from './NavbarUpper';
-import { NavbarLower } from './NavbarLower';
+import { OffCanvas } from "../OffCanvas";
+import { SearchDrawer } from "./SearchDrawer";
+import { FiltersMobile } from "../filters-mobile/FiltersMobile";
+import { SortMobile } from "./SortMobile";
+import { NavbarUpper } from "./NavbarUpper";
+import { NavbarLower } from "./NavbarLower";
 
 export const Navbar = () => {
     const [isUpperNavbarShow, setUpperNavbarShow] = useState(true);
@@ -13,10 +13,10 @@ export const Navbar = () => {
     const [lastScrollY, setLastScrollY] = useState(0);
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener("scroll", handleScroll);
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener("scroll", handleScroll);
         };
     });
 
@@ -33,12 +33,12 @@ export const Navbar = () => {
     return (
         <>
             <SearchDrawer isSearchDrawerOpen={isSearchDrawerOpen} setSearchDrawerOpen={setSearchDrawerOpen} />
-            <nav className='text-white sticky top-0 xl:bg-black z-10'>
+            <nav className="text-white sticky top-0 xl:bg-black z-10">
 
                 <NavbarUpper isUpperNavbarShow={isUpperNavbarShow} setSearchDrawerOpen={setSearchDrawerOpen} />
                 <NavbarLower isUpperNavbarShow={isUpperNavbarShow} />
 
-                <div className={`w-full flex lg:hidden relative ${isUpperNavbarShow ? 'top-0' : '-top-12'} md:static bg-white text-black`}>
+                <div className={`w-full flex lg:hidden relative ${isUpperNavbarShow ? "top-0" : "-top-12"} md:static bg-white text-black`}>
                     <SortMobile />
                     <FiltersMobile />
                 </div>
