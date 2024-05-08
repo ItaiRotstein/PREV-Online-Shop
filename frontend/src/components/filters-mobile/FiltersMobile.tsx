@@ -38,9 +38,7 @@ export const FiltersMobile = () => {
                     <div className="flex items-center gap-3">
                         <IoClose
                             className="w-5 h-5 cursor-pointer"
-                            onClick={() => {
-                                setFilterMenuShow(false);
-                            }}
+                            onClick={() => { setFilterMenuShow(false); }}
                         />
                         <h1>Filter Products</h1>
                     </div>

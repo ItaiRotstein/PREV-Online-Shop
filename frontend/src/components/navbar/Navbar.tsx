@@ -21,7 +21,7 @@ export const Navbar = () => {
     });
 
     function handleScroll() {
-        if (window.scrollY > lastScrollY) setUpperNavbarShow(false);
+        if (window.scrollY > 1 && window.scrollY > lastScrollY) setUpperNavbarShow(false);
         else setUpperNavbarShow(true);
         setLastScrollY(window.scrollY);
     }

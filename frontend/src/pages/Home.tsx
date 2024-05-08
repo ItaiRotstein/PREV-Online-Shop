@@ -65,9 +65,14 @@ export const Home = () => {
   }
 
   return (
-    <div >
+    <div
+      onClick={() =>
+        filterDispatch({ type: 'SET_SORT_MENU_MOBILE_SHOW', payload: false })
+      }
+      className="h-full"
+    >
       <Navbar />
-      <div >
+      <div>
         <main className="flex relative mx-auto xl:max-w-[1280px]">
           <Filters />
           <div ref={scrollRef} className="lg:w-3/4 xl:w-4/5 flex flex-wrap justify-center px-1 md:px-2  mt-3 lg:mt-0">

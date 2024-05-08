@@ -64,6 +64,7 @@ const AppContext = ({ children }: Props) => {
     });
 
     const [filterState, filterDispatch] = useReducer(FilterReducer, {
+        isSortMenuMobileShow: false,
         byInStock: false,
         byNewIn: false,
         searchQuery: "",

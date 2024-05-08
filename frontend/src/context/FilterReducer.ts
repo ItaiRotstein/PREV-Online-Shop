@@ -1,6 +1,7 @@
 import { FilterActions, FilterState } from '../types/Filter';
 
 const initialState = {
+    isSortMenuMobileShow: false,
     byInStock: false,
     byNewIn: false,
     searchQuery: '',
@@ -41,6 +42,12 @@ const initialState = {
 
 const FilterReducer = (state: FilterState, action: FilterActions) => {
     switch (action.type) {
+        case 'SET_SORT_MENU_MOBILE_SHOW':
+            return { ...state, isSortMenuMobileShow: action.payload };
+        case 'FILTER_BY_SEARCH_QUERY':
+            return { ...state, searchQuery: action.payload };
+        case 'SET_ITEMS_PER_FETCH':
+            return { ...state, itemsPerFetch: state.itemsPerFetch + action.payload };
         case 'FILTER_BY_INSTOCK':
             return { ...state, byInStock: !state.byInStock };
         case 'FILTER_BY_NEWIN':
@@ -117,10 +124,6 @@ const FilterReducer = (state: FilterState, action: FilterActions) => {
             return { ...state, byGender: { ...state.byGender, YoungerBoys: !state.byGender.YoungerBoys } };
         case 'FILTER_BY_GENDER_UNISEX':
             return { ...state, byGender: { ...state.byGender, Unisex: !state.byGender.Unisex } };
-        case 'FILTER_BY_SEARCH_QUERY':
-            return { ...state, searchQuery: action.payload };
-        case 'SET_ITEMS_PER_FETCH':
-            return { ...state, itemsPerFetch: state.itemsPerFetch + action.payload };
         case 'CLEAR_FILTERS':
             return initialState;
         default:

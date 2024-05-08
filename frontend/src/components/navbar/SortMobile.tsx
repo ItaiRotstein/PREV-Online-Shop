@@ -5,17 +5,14 @@ import { AppState } from "../../context/AppContext";
 import { FilterActions } from "../../types/Filter";
 
 export const SortMobile = () => {
-    const [isSortMenuShow, setSortMenuShow] = useState<boolean>(false);
     const [activeMenuIdx, setActiveMenuIdx] = useState<number>(0);
 
     const {
         filterDispatch,
+        filterState: { isSortMenuMobileShow }
     } = AppState();
-    type SortByList = {
-        title: string;
-        dispatch: FilterActions;
-    };
-    const sortByList: SortByList[] = [
+
+    const sortByList: { title: string; dispatch: FilterActions; }[] = [
         { title: "Most Popular", dispatch: { type: "SORT_BY_POPULARITY" } },
         { title: "Alphabetical", dispatch: { type: "SORT_BY_ALPHABET" } },
         { title: "Price: Low - High", dispatch: { type: "SORT_BY_PRICE", payload: "lowtohigh" } },
@@ -25,12 +22,14 @@ export const SortMobile = () => {
     return (
         <button
             className="relative w-1/2 flex justify-center items-center gap-1 border-b border-r border-gray-300 p-4 font-bold text-sm"
-            onClick={() => setSortMenuShow(!isSortMenuShow)}
-            onBlur={() => setSortMenuShow(false)}
+            onClick={(e) => {
+                filterDispatch({ type: "SET_SORT_MENU_MOBILE_SHOW", payload: !isSortMenuMobileShow });
+                e.stopPropagation();
+            }}
         >
-            {!isSortMenuShow && <BiSortAlt2 className="w-5 h-5" />}
-            {isSortMenuShow ? "Close" : "Sort"}
-            {isSortMenuShow &&
+            {!isSortMenuMobileShow && <BiSortAlt2 className="w-5 h-5" />}
+            {isSortMenuMobileShow ? "Close" : "Sort"}
+            {isSortMenuMobileShow &&
                 <div
                     className="absolute translate-x-30 translate-y-[135px] z-10"
                     onClick={(e) => e.stopPropagation()}
@@ -39,11 +38,12 @@ export const SortMobile = () => {
                     <ul className=" bg-white border-t-4 border-black drawer-shadow text-left">
                         {sortByList.map((sortBy, idx) =>
                             <li
-                                key={sortBy + idx.toString()}
+                                key={sortBy.title + idx}
                                 className={`flex gap-3 py-[14px] ${activeMenuIdx === idx ? "bg-gray-200" : "bg-white"} hover:brightness-95`}
                                 onClick={() => {
                                     setActiveMenuIdx(idx);
                                     filterDispatch(sortBy.dispatch);
+                                    filterDispatch({ type: "SET_SORT_MENU_MOBILE_SHOW", payload: false });
                                 }}
                             >
                                 <div className="w-4 px-1">

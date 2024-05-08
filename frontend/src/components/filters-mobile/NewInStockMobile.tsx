@@ -22,6 +22,7 @@ export const NewInStockMobile = ({ activeFilterIdx }: { activeFilterIdx: number 
             </div>
             <div
                 className="flex items-center py-2 cursor-pointer"
+                inputMode='none'
                 onClick={() => filterDispatch({
                     type: "FILTER_BY_INSTOCK"
                 })}
