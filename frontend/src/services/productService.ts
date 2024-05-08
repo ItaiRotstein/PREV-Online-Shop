@@ -11,12 +11,18 @@ const getProducts = async (filterState: FilterState) => {
         params: filterState
     };
     const response = await axios.get(`${API_URL}/products`, config);
-    
+    return await response.data;
+};
+
+//--Get products data--
+const getProductsData = async () => {
+    const response = await axios.get(`${API_URL}/products/data`,);
     return await response.data;
 };
 
 const productService = {
     getProducts,
+    getProductsData,
 };
 
 export default productService;

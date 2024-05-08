@@ -28,11 +28,15 @@ export const Home = () => {
       try {
         const data = await productService.getProducts(filterState);
         productDispatch({
-          type: "GET_PRODUCTS_DATA",
-          payload: data
+          type: "GET_PRODUCTS",
+          payload: data.products
+        });
+        productDispatch({
+          type: "GET_TOTAL_PRODUCTS_COUNT",
+          payload: data.totalProductsCount
         });
       } catch (error) {
-        console.log("Error fetching data", error);
+        console.log("Error fetching products", error);
       } finally {
         setIsFetchingMore(false);
         setIsLoading(false);
@@ -40,6 +44,21 @@ export const Home = () => {
     };
     getProducts();
   }, [filterState]);
+
+  useEffect(() => {
+    const getProductsData = async () => {
+      try {
+        const data = await productService.getProductsData();
+        productDispatch({
+          type: "GET_PRODUCTS_DATA",
+          payload: data
+        });
+      } catch (error) {
+        console.log("Error fetching data", error);
+      }
+    };
+    getProductsData();
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScrollToBottom);

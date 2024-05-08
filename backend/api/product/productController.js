@@ -25,32 +25,6 @@ const getProducts = asyncHandler(async (req, res) => {
       $facet: {
         data: [{ $limit: +itemsPerFetch }],
         totalProductsCount: [{ $count: 'totalProducts' }],
-        inStockCount: [{ $match: { inStock: true } }, { $count: 'inStock' }],
-        newInCount: [{ $match: { newIn: true } }, { $count: 'newIn' }],
-        //SIZES
-        sizeXScount: [{ $match: { sizes: 'XS' } }, { $count: 'XS' }],
-        sizeScount: [{ $match: { sizes: 'S' } }, { $count: 'S' }],
-        sizeMcount: [{ $match: { sizes: 'M' } }, { $count: 'M' }],
-        sizeLcount: [{ $match: { sizes: 'L' } }, { $count: 'L' }],
-        sizeXLcount: [{ $match: { sizes: 'XL' } }, { $count: 'XL' }],
-        //MATERIAL
-        countCashmere: [{ $match: { material: 'Cashmere' } }, { $count: 'Cashmere' }],
-        countCotton: [{ $match: { material: 'Cotton' } }, { $count: 'Cotton' }],
-        countPolyester: [{ $match: { material: 'Polyester' } }, { $count: 'Polyester' }],
-        countLeather: [{ $match: { material: 'Leather' } }, { $count: 'Leather' }],
-        countRubber: [{ $match: { material: 'Rubber' } }, { $count: 'Rubber' }],
-        countDenim: [{ $match: { material: 'Denim' } }, { $count: 'Denim' }],
-        countWool: [{ $match: { material: 'Wool' } }, { $count: 'Wool' }],
-        countAcrylic: [{ $match: { material: 'Acrylic' } }, { $count: 'Acrylic' }],
-        countSilk: [{ $match: { material: 'Silk' } }, { $count: 'Silk' }],
-        countSuede: [{ $match: { material: 'Suede' } }, { $count: 'Suede' }],
-        countSpandex: [{ $match: { material: 'Spandex' } }, { $count: 'Spandex' }],
-        //GENDER
-        countWoman: [{ $match: { gender: 'Woman' } }, { $count: 'Woman' }],
-        countMan: [{ $match: { gender: 'Man' } }, { $count: 'Man' }],
-        countOlderBoys: [{ $match: { gender: 'Older Boys' } }, { $count: 'OlderBoys' }],
-        countYoungerBoys: [{ $match: { gender: 'Younger Boys' } }, { $count: 'YoungerBoys' }],
-        countUnisex: [{ $match: { gender: 'Unisex' } }, { $count: 'Unisex' }],
       }
     },
   ];
@@ -109,6 +83,52 @@ const getProducts = asyncHandler(async (req, res) => {
 
   res.status(200).json({
     totalProductsCount: !products[0].totalProductsCount.length ? 0 : products[0].totalProductsCount[0].totalProducts,
+    products: products[0].data,
+  });
+});
+
+const getProductsData = asyncHandler(async (req, res) => {
+
+  const pipeline = [
+    {
+      $facet: {
+        inStockCount: [{ $match: { inStock: true } }, { $count: 'inStock' }],
+        newInCount: [{ $match: { newIn: true } }, { $count: 'newIn' }],
+        //SIZES
+        sizeXScount: [{ $match: { sizes: 'XS' } }, { $count: 'XS' }],
+        sizeScount: [{ $match: { sizes: 'S' } }, { $count: 'S' }],
+        sizeMcount: [{ $match: { sizes: 'M' } }, { $count: 'M' }],
+        sizeLcount: [{ $match: { sizes: 'L' } }, { $count: 'L' }],
+        sizeXLcount: [{ $match: { sizes: 'XL' } }, { $count: 'XL' }],
+        //MATERIAL
+        countCashmere: [{ $match: { material: 'Cashmere' } }, { $count: 'Cashmere' }],
+        countCotton: [{ $match: { material: 'Cotton' } }, { $count: 'Cotton' }],
+        countPolyester: [{ $match: { material: 'Polyester' } }, { $count: 'Polyester' }],
+        countLeather: [{ $match: { material: 'Leather' } }, { $count: 'Leather' }],
+        countRubber: [{ $match: { material: 'Rubber' } }, { $count: 'Rubber' }],
+        countDenim: [{ $match: { material: 'Denim' } }, { $count: 'Denim' }],
+        countWool: [{ $match: { material: 'Wool' } }, { $count: 'Wool' }],
+        countAcrylic: [{ $match: { material: 'Acrylic' } }, { $count: 'Acrylic' }],
+        countSilk: [{ $match: { material: 'Silk' } }, { $count: 'Silk' }],
+        countSuede: [{ $match: { material: 'Suede' } }, { $count: 'Suede' }],
+        countSpandex: [{ $match: { material: 'Spandex' } }, { $count: 'Spandex' }],
+        //GENDER
+        countWoman: [{ $match: { gender: 'Woman' } }, { $count: 'Woman' }],
+        countMan: [{ $match: { gender: 'Man' } }, { $count: 'Man' }],
+        countOlderBoys: [{ $match: { gender: 'Older Boys' } }, { $count: 'OlderBoys' }],
+        countYoungerBoys: [{ $match: { gender: 'Younger Boys' } }, { $count: 'YoungerBoys' }],
+        countUnisex: [{ $match: { gender: 'Unisex' } }, { $count: 'Unisex' }],
+      }
+    },
+  ];
+
+  const products = await Product.aggregate(pipeline);
+  if (!products) {
+    res.status(400);
+    throw new Error('Product not found');
+  }
+
+  res.status(200).json({
     inStockCount: !products[0].inStockCount.length ? 0 : products[0].inStockCount[0].inStock,
     newInCount: !products[0].newInCount.length ? 0 : products[0].newInCount[0].newIn,
     //SIZE
@@ -141,10 +161,10 @@ const getProducts = asyncHandler(async (req, res) => {
       countYoungerBoys: !products[0].countYoungerBoys.length ? 0 : products[0].countYoungerBoys[0].YoungerBoys,
       countUnisex: !products[0].countUnisex.length ? 0 : products[0].countUnisex[0].Unisex,
     },
-    products: products[0].data,
   });
 });
 
 module.exports = {
   getProducts,
+  getProductsData
 };
