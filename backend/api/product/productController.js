@@ -55,6 +55,12 @@ const getProducts = asyncHandler(async (req, res) => {
     },
   ];
 
+  if (searchQuery) {
+    if (searchQuery) {
+      pipeline.unshift({ $match: { name: { $regex: searchQuery, $options: 'i' } } });
+    }
+  }
+
   if (byPrice) {
     const sortOrder = byPrice === 'lowtohigh' ? 1 : -1;
     pipeline.unshift({ $sort: { price: sortOrder } });
