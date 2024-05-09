@@ -1,5 +1,6 @@
 import { AppState } from "../../context/AppContext";
 import { FaCheck } from "react-icons/fa6";
+import { utilService } from "../../services/util.service";
 
 type Props = {
     idx: number;
@@ -11,65 +12,11 @@ export const MaterialMobile = ({ idx, activeFilterIdx, setActiveFilterIdx }: Pro
 
     const {
         filterDispatch,
-        filterState: { byMaterial: {
-            Cashmere,
-            Cotton,
-            Polyester,
-            Leather,
-            Rubber,
-            Denim,
-            Wool,
-            Acrylic,
-            Silk,
-            Suede,
-            Spandex,
-        } },
-        productState: {
-            materialCount: {
-                countCashmere,
-                countCotton,
-                countPolyester,
-                countLeather,
-                countRubber,
-                countDenim,
-                countWool,
-                countAcrylic,
-                countSilk,
-                countSuede,
-                countSpandex,
-            } }
+        filterState: { byMaterial },
+        productState: { materialCount }
     } = AppState();
 
-    const materialList: { title: string, count: number, filterState: boolean; }[] = [
-        { title: "Cashmere", count: countCashmere, filterState: Cashmere },
-        { title: "Cotton", count: countCotton, filterState: Cotton },
-        { title: "Polyester", count: countPolyester, filterState: Polyester },
-        { title: "Leather", count: countLeather, filterState: Leather },
-        { title: "Rubber", count: countRubber, filterState: Rubber },
-        { title: "Denim", count: countDenim, filterState: Denim },
-        { title: "Wool", count: countWool, filterState: Wool },
-        { title: "Acrylic", count: countAcrylic, filterState: Acrylic },
-        { title: "Silk", count: countSilk, filterState: Silk },
-        { title: "Suede", count: countSuede, filterState: Suede },
-        { title: "Spandex", count: countSpandex, filterState: Spandex },
-    ];
 
-    function handleClick(material: string) {
-        switch (material) {
-            case "Cashmere": filterDispatch({ type: "FILTER_BY_MATERIAL_CASHMERE" }); break;
-            case "Cotton": filterDispatch({ type: "FILTER_BY_MATERIAL_COTTON" }); break;
-            case "Polyester": filterDispatch({ type: "FILTER_BY_MATERIAL_POLYESTER" }); break;
-            case "Leather": filterDispatch({ type: "FILTER_BY_MATERIAL_LEATHER" }); break;
-            case "Rubber": filterDispatch({ type: "FILTER_BY_MATERIAL_RUBBER" }); break;
-            case "Denim": filterDispatch({ type: "FILTER_BY_MATERIAL_DENIM" }); break;
-            case "Wool": filterDispatch({ type: "FILTER_BY_MATERIAL_WOOL" }); break;
-            case "Acrylic": filterDispatch({ type: "FILTER_BY_MATERIAL_ACRYLIC" }); break;
-            case "Silk": filterDispatch({ type: "FILTER_BY_MATERIAL_SILK" }); break;
-            case "Suede": filterDispatch({ type: "FILTER_BY_MATERIAL_SUEDE" }); break;
-            case "Spandex": filterDispatch({ type: "FILTER_BY_MATERIAL_SPANDEX" }); break;
-            default: break;
-        }
-    }
 
     return (
         <>
@@ -77,14 +24,18 @@ export const MaterialMobile = ({ idx, activeFilterIdx, setActiveFilterIdx }: Pro
                 <p onClick={() => setActiveFilterIdx(idx)}>Material</p>
             </div>
             {activeFilterIdx === idx && <div className="absolute h-full w-full top-[45px] left-[240px] bg-white border-s border-s-gray-400">
-                {materialList.map((material, idx) =>
+                {Object.keys(byMaterial).map((material, idx) =>
                     <div
-                        key={material.title + idx}
+                        key={utilService.makeId()}
                         className="flex justify-start py-2 ps-4 font-normal cursor-pointer"
-                        onClick={() => handleClick(material.title)}
+                        onClick={() => filterDispatch({
+                            type: "FILTER_BY_MATERIAL", payload: {
+                                ...byMaterial, [material]: !Object.values(byMaterial)[idx]
+                            }
+                        })}
                     >
-                        <span>{material.title} ({material.count})</span>
-                        {material.filterState && <FaCheck className="w-5 h-5 ms-2 text-green-600" />}
+                        <span>{material.replace("_", " ")} ({Object.values(materialCount)[idx]})</span>
+                        {Object.values(byMaterial)[idx] && <FaCheck className="w-5 h-5 ms-2 text-green-600" />}
                     </div>
                 )}
             </div>}

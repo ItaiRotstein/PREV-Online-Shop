@@ -5,6 +5,7 @@ const Product = require('../../models/productModel');
 // @route   GET /api/products
 // @access  Private
 const getProducts = asyncHandler(async (req, res) => {
+  console.log(req.query);
   const {
     byInStock,
     byNewIn,
@@ -115,8 +116,8 @@ const getProductsData = asyncHandler(async (req, res) => {
         //GENDER
         countWoman: [{ $match: { gender: 'Woman' } }, { $count: 'Woman' }],
         countMan: [{ $match: { gender: 'Man' } }, { $count: 'Man' }],
-        countOlderBoys: [{ $match: { gender: 'Older Boys' } }, { $count: 'OlderBoys' }],
-        countYoungerBoys: [{ $match: { gender: 'Younger Boys' } }, { $count: 'YoungerBoys' }],
+        countOlderBoys: [{ $match: { gender: 'Older_Boys' } }, { $count: 'OlderBoys' }],
+        countYoungerBoys: [{ $match: { gender: 'Younger_Boys' } }, { $count: 'YoungerBoys' }],
         countUnisex: [{ $match: { gender: 'Unisex' } }, { $count: 'Unisex' }],
       }
     },

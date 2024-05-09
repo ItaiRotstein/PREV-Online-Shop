@@ -19,8 +19,8 @@
         ],
         "gender": [
             "Man",
-            "Older Boys",
-            "Younger Boys"
+            "Older_Boys",
+            "Younger_Boys"
         ],
         "use": [
             "Casual",
@@ -101,7 +101,7 @@
             "Streetwear"
         ],
         "newIn": false,
-        "inStock": true,
+        "inStock": false,
         "popularity": 1,
         "previewImg": "https://picsum.photos/seed/skinnyfitjeans-preview/224/336",
         "images": [
@@ -239,14 +239,14 @@
             "Denim"
         ],
         "gender": [
-            "Woman"
+            "Younger_Boys"
         ],
         "use": [
             "Casual",
             "Streetwear"
         ],
         "newIn": false,
-        "inStock": true,
+        "inStock": false,
         "popularity": 2,
         "previewImg": "https://picsum.photos/seed/highwaistedjeans-preview/224/336",
         "images": [
@@ -258,7 +258,7 @@
     },
     {
         "name": "Graphic T-Shirt",
-        "category": "T-Shirts",
+        "category": "T_shirts",
         "price": 24.99,
         "colors": [
             "Blue",
@@ -276,8 +276,8 @@
         ],
         "gender": [
             "Man",
-            "Older Boys",
-            "Younger Boys"
+            "Older_Boys",
+            "Younger_Boys"
         ],
         "use": [
             "Casual",
@@ -389,8 +389,8 @@
         ],
         "gender": [
             "Man",
-            "Older Boys",
-            "Younger Boys"
+            "Older_Boys",
+            "Younger_Boys"
         ],
         "use": [
             "Casual",
@@ -433,7 +433,7 @@
             "Eveningwear"
         ],
         "newIn": true,
-        "inStock": true,
+        "inStock": false,
         "popularity": 3,
         "previewImg": "https://picsum.photos/seed/embroideredmididress-preview/224/336",
         "images": [
@@ -531,8 +531,8 @@
             "Denim"
         ],
         "gender": [
-            "Man",
-            "Woman"
+            "Older_Boys",
+            "Younger_Boys"
         ],
         "use": [
             "Casual",
@@ -602,7 +602,7 @@
             "Cashmere"
         ],
         "gender": [
-            "Woman"
+            "Older_Boys"
         ],
         "use": [
             "Casual",
@@ -745,7 +745,7 @@
         ],
         "gender": [
             "Man",
-            "Older Boys"
+            "Older_Boys"
         ],
         "use": [
             "Casual",
@@ -884,7 +884,7 @@
             "Viscose"
         ],
         "gender": [
-            "Woman"
+            "Older_Boys"
         ],
         "use": [
             "Casual",
@@ -1063,7 +1063,7 @@
             "Travel"
         ],
         "newIn": false,
-        "inStock": true,
+        "inStock": false,
         "popularity": 2,
         "previewImg": "https://picsum.photos/seed/printedtotebag-preview/224/336",
         "images": [
@@ -1212,7 +1212,7 @@
     },
     {
         "name": "Graphic T-Shirt",
-        "category": "T-Shirts",
+        "category": "T_shirts",
         "price": 24.99,
         "colors": [
             "Blue",
@@ -1263,7 +1263,8 @@
             "Cotton"
         ],
         "gender": [
-            "Man"
+            "Younger_Boys",
+            "Unisex"
         ],
         "use": [
             "Casual",
@@ -1427,7 +1428,7 @@
             "Wool"
         ],
         "gender": [
-            "Woman"
+            "Unisex"
         ],
         "use": "Winterwear",
         "newIn": true,
@@ -1502,7 +1503,7 @@
     },
     {
         "name": "Printed T-Shirt",
-        "category": "T-Shirts",
+        "category": "T_shirts",
         "price": 24.99,
         "colors": [
             "Red",
@@ -1850,7 +1851,10 @@
             "Cotton"
         ],
         "gender": [
-            "Man"
+            "Man",
+            "Younger_Boys",
+            "Woman",
+            "Unisex"
         ],
         "use": "Casual",
         "newIn": true,
@@ -1971,7 +1975,7 @@
             "Leather"
         ],
         "gender": [
-            "Man"
+            "Unisex"
         ],
         "use": "Casual",
         "newIn": false,
@@ -2154,7 +2158,7 @@
         ],
         "use": "Accessories",
         "newIn": true,
-        "inStock": true,
+        "inStock": false,
         "popularity": 1,
         "previewImg": "https://picsum.photos/seed/printedsilkscarf-preview/224/336",
         "images": [
@@ -2274,7 +2278,7 @@
         ],
         "use": "Casual",
         "newIn": false,
-        "inStock": true,
+        "inStock": false,
         "popularity": 3,
         "previewImg": "https://picsum.photos/seed/highwaistedjeans-preview/224/336",
         "images": [
@@ -2357,7 +2361,8 @@
             "Suede"
         ],
         "gender": [
-            "Woman"
+            "Younger_Boys",
+            "Man"
         ],
         "use": "Smart Casual",
         "newIn": false,

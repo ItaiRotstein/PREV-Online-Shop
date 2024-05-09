@@ -97,8 +97,8 @@ const AppContext = ({ children }: Props) => {
         byGender: {
             Woman: false,
             Man: false,
-            OlderBoys: false,
-            YoungerBoys: false,
+            Older_Boys: false,
+            Younger_Boys: false,
             Unisex: false,
         },
     });

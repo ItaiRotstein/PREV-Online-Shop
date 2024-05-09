@@ -1,6 +1,7 @@
 import { AppState } from "../../context/AppContext";
 
 import { FaCheck } from "react-icons/fa6";
+import { utilService } from "../../services/util.service";
 
 type Props = {
     idx: number;
@@ -12,34 +13,9 @@ export const SizeMobile = ({ idx, activeFilterIdx, setActiveFilterIdx }: Props) 
 
     const {
         filterDispatch,
-        filterState: { bySize: { XS, S, M, L, XL } },
-        productState: {
-            sizeCount: {
-                sizeXScount,
-                sizeScount,
-                sizeMcount,
-                sizeLcount,
-                sizeXLcount } }
+        filterState: { bySize },
+        productState: { sizeCount, }
     } = AppState();
-
-    const sizeList: { title: string, count: number, filterState: boolean; }[] = [
-        { title: "XS", count: sizeXScount, filterState: XS },
-        { title: "S", count: sizeScount, filterState: S },
-        { title: "M", count: sizeMcount, filterState: M },
-        { title: "L", count: sizeLcount, filterState: L },
-        { title: "XL", count: sizeXLcount, filterState: XL },
-    ];
-
-    function handleClick(size: string) {
-        switch (size) {
-            case "XS": filterDispatch({ type: "FILTER_BY_SIZE_XS" }); break;
-            case "S": filterDispatch({ type: "FILTER_BY_SIZE_S" }); break;
-            case "M": filterDispatch({ type: "FILTER_BY_SIZE_M" }); break;
-            case "L": filterDispatch({ type: "FILTER_BY_SIZE_L" }); break;
-            case "XL": filterDispatch({ type: "FILTER_BY_SIZE_XL" }); break;
-            default: break;
-        }
-    }
 
     return (
         <>
@@ -47,14 +23,18 @@ export const SizeMobile = ({ idx, activeFilterIdx, setActiveFilterIdx }: Props) 
                 <p onClick={() => setActiveFilterIdx(idx)}>Size</p>
             </div>
             {activeFilterIdx === idx && <div className="absolute h-full w-full top-[45px] left-[240px] bg-white border-s transition-all">
-                {sizeList.map((size, idx) =>
+                {Object.keys(bySize).map((size, idx) =>
                     <div
-                        key={size.title + idx}
+                        key={utilService.makeId()}
                         className="flex justify-start py-2 ps-4 font-normal cursor-pointer"
-                        onClick={() => handleClick(size.title)}
+                        onClick={() => filterDispatch({
+                            type: "FILTER_BY_SIZE", payload: {
+                                ...bySize, [size]: !Object.values(bySize)[idx]
+                            }
+                        })}
                     >
-                        <span>{size.title} ({size.count})</span>
-                        {size.filterState && <FaCheck className="w-5 h-5 ms-2 text-green-600" />}
+                        <span>{size} ({Object.values(sizeCount)[idx]})</span>
+                        {Object.values(bySize)[idx] && <FaCheck className="w-5 h-5 ms-2 text-green-600" />}
                     </div>
                 )}
             </div>}
