@@ -33,7 +33,7 @@ export const FiltersMobile = () => {
                 <TbAdjustmentsHorizontal className="w-5 h-5" />
                 Filter
             </button>
-            <div className={`fixed top-0 ${isFiltertMenuShow ? "right-0" : "-right-full"} w-full h-full transition-all duration-500 z-20 bg-white text-black text-sm font-medium`}>
+            {isFiltertMenuShow && <div className={`fixed top-0 ${isFiltertMenuShow ? "right-0" : "-right-full"} w-full h-full transition-all duration-500 z-20 bg-white text-black text-sm font-medium`}>
                 <div className="flex justify-between items-center py-3 ps-3 pe-5 border-b border-b-gray-400 bg-[rgb(247,247,247)]">
                     <div className="flex items-center gap-3">
                         <IoClose
@@ -75,7 +75,7 @@ export const FiltersMobile = () => {
                         )
                     }
                 </div>
-            </div>
+            </div>}
         </>
     );
 };
