@@ -32,7 +32,7 @@ export const Navbar = () => {
 
     return (
         <>
-            <SearchDrawer isSearchDrawerOpen={isSearchDrawerOpen} setSearchDrawerOpen={setSearchDrawerOpen} />
+            {isSearchDrawerOpen && <SearchDrawer isSearchDrawerOpen={isSearchDrawerOpen} setSearchDrawerOpen={setSearchDrawerOpen} />}
             <nav className="text-white sticky top-0 xl:bg-black z-10">
 
                 <NavbarUpper isUpperNavbarShow={isUpperNavbarShow} setSearchDrawerOpen={setSearchDrawerOpen} />
