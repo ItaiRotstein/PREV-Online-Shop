@@ -1,29 +1,38 @@
-import { useState } from "react";
+import { memo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import { BiSortAlt2 } from "react-icons/bi";
-import { AppState } from "../../context/AppContext";
-import { FilterActions } from "../../types/Filter";
 
-export const SortMobile = () => {
+import { AppState } from "../../context/AppContext";
+
+export const SortMobile = memo(() => {
     const [activeMenuIdx, setActiveMenuIdx] = useState<number>(0);
+    const [searchParams, setSearchParams] = useSearchParams();
 
     const {
-        filterDispatch,
-        filterState: { isSortMenuMobileShow }
+        setSortMenuMobileShow,
+        isSortMenuMobileShow
     } = AppState();
 
-    const sortByList: { title: string; dispatch: FilterActions; }[] = [
-        { title: "Most Popular", dispatch: { type: "SORT_BY_POPULARITY" } },
-        { title: "Alphabetical", dispatch: { type: "SORT_BY_ALPHABET" } },
-        { title: "Price: Low - High", dispatch: { type: "SORT_BY_PRICE", payload: "lowtohigh" } },
-        { title: "Price: High - Low", dispatch: { type: "SORT_BY_PRICE", payload: "hightolow" } },
+    const sortByList: { title: string; searchParamKey: string; }[] = [
+        { title: "Most Popular", searchParamKey: 'popular' },
+        { title: "Alphabetical", searchParamKey: 'alphabet' },
+        { title: "Price: Low - High", searchParamKey: 'price' },
+        { title: "Price: High - Low", searchParamKey: 'price-rev' },
     ];
+
+    function handleClick(searchParamKey:string, idx:number) {
+        setActiveMenuIdx(idx);
+        searchParams.set('sort', searchParamKey);
+        setSearchParams(searchParams);
+        setSortMenuMobileShow(false);
+    }
 
     return (
         <button
             className="relative w-1/2 flex justify-center items-center gap-1 border-b border-r border-gray-300 p-4 font-bold text-sm"
             onClick={(e) => {
-                filterDispatch({ type: "SET_SORT_MENU_MOBILE_SHOW", payload: !isSortMenuMobileShow });
+                setSortMenuMobileShow(!isSortMenuMobileShow);
                 e.stopPropagation();
             }}
         >
@@ -40,11 +49,7 @@ export const SortMobile = () => {
                             <li
                                 key={sortBy.title + idx}
                                 className={`flex gap-3 py-[14px] ${activeMenuIdx === idx ? "bg-gray-200" : "bg-white"} hover:brightness-95`}
-                                onClick={() => {
-                                    setActiveMenuIdx(idx);
-                                    filterDispatch(sortBy.dispatch);
-                                    filterDispatch({ type: "SET_SORT_MENU_MOBILE_SHOW", payload: false });
-                                }}
+                                onClick={()=>handleClick(sortBy.searchParamKey, idx)}
                             >
                                 <div className="w-4 px-1">
                                     {activeMenuIdx === idx && (
@@ -62,4 +67,4 @@ export const SortMobile = () => {
                 </div>}
         </button>
     );
-};
+});

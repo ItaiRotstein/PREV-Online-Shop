@@ -1,14 +1,13 @@
 import axios from 'axios';
-import { FilterState } from '../types/Filter';
 
 const API_URL = (process.env.NODE_ENV === 'production')
     ? '/api'
     : 'http://localhost:5000/api';
 
 //--Get products--
-const getProducts = async (filterState: FilterState) => {
+const getProducts = async (searchParams: any, fetchItems: number) => {
     const config = {
-        params: filterState
+        params: {...searchParams, fetchItems}
     };
     const response = await axios.get(`${API_URL}/products`, config);
     return await response.data;

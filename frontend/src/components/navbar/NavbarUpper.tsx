@@ -11,8 +11,6 @@ type Props = {
 export const NavbarUpper = ({ isUpperNavbarShow, setSearchDrawerOpen }: Props) => {
     const {
         cartState: { cart },
-        filterState: { searchQuery },
-        filterDispatch
     } = AppState();
     const buttonStyle = cart.length > 0 ? (
         "hidden md:flex items-center justify-center min-w-28 py-4 bg-green-500 hover:bg-green-600 text-sm rounded"
@@ -24,7 +22,7 @@ export const NavbarUpper = ({ isUpperNavbarShow, setSearchDrawerOpen }: Props) =
         <div className={`relative ${isUpperNavbarShow ? "top-0" : "-top-14"} md:static flex justify-between items-center xl:max-w-[1280px] xl:mx-auto bg-black px-3 md:px-8 py-2 md:py-3`}>
             <div className="w-1/2 lg:w-3/5 flex items-center gap-8">
                 <div className="font-merriweather text-2xl">P R E V</div>
-                <SearchFilter searchQuery={searchQuery} filterDispatch={filterDispatch} />
+                <SearchFilter />
             </div>
             <div className="w-1/2 lg:w-2/5 flex justify-end items-center gap-3 sm:gap-5 [&>*]:w-5 [&>*]:h-5 md:[&>*]:w-6 md:[&>*]:h-6">
                 <BsSearch

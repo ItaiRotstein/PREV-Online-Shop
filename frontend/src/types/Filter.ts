@@ -1,14 +1,5 @@
 export type FilterState = {
-    isSortMenuMobileShow: boolean;
-    sort: {
-        byPrice: string;
-        byAlphabet: boolean;
-        byPopularity: boolean;
-    };
-    byInStock: boolean;
-    byNewIn: boolean;
-    searchQuery: string;
-    itemsPerFetch: number;
+    fetchItems: number;
     bySize: {
         XS: boolean,
         S: boolean,
@@ -39,16 +30,8 @@ export type FilterState = {
 };
 
 
-type SortMenuShow = { type: "SET_SORT_MENU_MOBILE_SHOW", payload: boolean; };
 type ClearFilters = { type: "CLEAR_FILTERS"; };
-type ByInStock = { type: "FILTER_BY_INSTOCK"; };
-type ByNewIn = { type: "FILTER_BY_NEWIN"; };
-type BySearchQuery = { type: "FILTER_BY_SEARCH_QUERY"; payload: string; };
-type ItemsPerFetch = { type: "SET_ITEMS_PER_FETCH", payload: number; };
-//SORT
-type SortByPrice = { type: "SORT_BY_PRICE"; payload: string; };
-type SortByAlphabet = { type: "SORT_BY_ALPHABET"; };
-type SortByPouplarity = { type: "SORT_BY_POPULARITY"; };
+type FetchItems = { type: "SET_ITEMS_PER_FETCH" };
 //SIZES
 type BySize = {
     type: "FILTER_BY_SIZE";
@@ -90,14 +73,7 @@ type ByGender = {
 };
 export type FilterActions =
     ClearFilters |
-    SortMenuShow |
-    SortByPrice |
-    SortByAlphabet |
-    SortByPouplarity |
-    BySearchQuery |
-    ItemsPerFetch |
-    ByInStock |
-    ByNewIn |
+    FetchItems |
     BySize |
     ByMaterial |
     ByGender;

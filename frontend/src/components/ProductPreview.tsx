@@ -7,7 +7,7 @@ type Props = {
 export const ProductPreview = ({ prod }: Props) => {
 
     return (
-        <div className="w-[49%] md:w-[32%] xl:w-[24%] px-1 md:px-2 rounded-sm overflow-hidden shadow-sm">
+        <div className="w-[49%] h-fit md:w-[32%] xl:w-[24%] px-1 md:px-2 rounded-sm overflow-hidden shadow-sm">
             <img className="block w-full h-auto aspect-[2/3]"
                 src={prod.previewImg}
             />

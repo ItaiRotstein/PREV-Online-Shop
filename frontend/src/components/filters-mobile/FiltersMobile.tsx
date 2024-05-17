@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 
 import { TbAdjustmentsHorizontal } from "react-icons/tb";
 import { IoClose } from "react-icons/io5";
@@ -7,20 +7,25 @@ import { MaterialMobile } from "./MaterialMobile";
 import { GenderMobile } from "./GenderMobile";
 import { NewInStockMobile } from "./NewInStockMobile";
 import { AppState } from "../../context/AppContext";
+import { useSearchParams } from "react-router-dom";
 
-export const FiltersMobile = () => {
-
+export const FiltersMobile = memo(() => {
     const [isFiltertMenuShow, setFilterMenuShow] = useState<boolean>(false);
     const [activeFilterIdx, setActiveFilterIdx] = useState<number | null>(null);
+    let [searchParams, setSearchParams] = useSearchParams();
 
     const {
         productState: { totalProductsCount },
-        filterDispatch
     } = AppState();
 
     //disable page scrolling when filter menu show
     document.body.style.overflow = isFiltertMenuShow ? "hidden" : "auto";
 
+    function handleClearAll() {
+        searchParams = new URLSearchParams()
+        searchParams.append('sort', 'popular' )
+        setSearchParams(searchParams)
+    }
     return (
         <>
             <button
@@ -44,9 +49,7 @@ export const FiltersMobile = () => {
                     </div>
                     <button
                         className="text-green-700"
-                        onClick={() => filterDispatch({
-                            type: "CLEAR_FILTERS"
-                        })}
+                        onClick={handleClearAll}
                     >
                         Clear All
                     </button>
@@ -78,4 +81,4 @@ export const FiltersMobile = () => {
             </div>}
         </>
     );
-};
+});

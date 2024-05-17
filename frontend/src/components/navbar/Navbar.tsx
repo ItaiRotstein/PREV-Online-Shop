@@ -6,6 +6,7 @@ import { FiltersMobile } from "../filters-mobile/FiltersMobile";
 import { SortMobile } from "./SortMobile";
 import { NavbarUpper } from "./NavbarUpper";
 import { NavbarLower } from "./NavbarLower";
+import { SortHeader } from "./SortHeader";
 
 export const Navbar = () => {
     const [isUpperNavbarShow, setUpperNavbarShow] = useState(true);
@@ -14,7 +15,6 @@ export const Navbar = () => {
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
-
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
@@ -26,25 +26,22 @@ export const Navbar = () => {
         setLastScrollY(window.scrollY);
     }
 
-    function closeDrawer() {
-        setSearchDrawerOpen(false);
-    }
-
     return (
         <>
-            {isSearchDrawerOpen && <SearchDrawer isSearchDrawerOpen={isSearchDrawerOpen} setSearchDrawerOpen={setSearchDrawerOpen} />}
-            <nav className="text-white sticky top-0 xl:bg-black z-10">
-
-                <NavbarUpper isUpperNavbarShow={isUpperNavbarShow} setSearchDrawerOpen={setSearchDrawerOpen} />
-                <NavbarLower isUpperNavbarShow={isUpperNavbarShow} />
-
+            <SearchDrawer isSearchDrawerOpen={isSearchDrawerOpen} setSearchDrawerOpen={setSearchDrawerOpen} />
+            <nav className="text-white sticky top-0 z-10">
+                <div className="xl:bg-black">
+                    <NavbarUpper isUpperNavbarShow={isUpperNavbarShow} setSearchDrawerOpen={setSearchDrawerOpen} />
+                    <NavbarLower isUpperNavbarShow={isUpperNavbarShow} />
+                </div>
+                <SortHeader />
                 <div className={`w-full flex lg:hidden relative ${isUpperNavbarShow ? "top-0" : "-top-12"} md:static bg-white text-black`}>
                     <SortMobile />
                     <FiltersMobile />
                 </div>
             </nav>
 
-            {isSearchDrawerOpen && <OffCanvas closeDrawer={closeDrawer} />}
+            {isSearchDrawerOpen && <OffCanvas closeDrawer={() => setSearchDrawerOpen(false)} />}
         </>
     );
 };

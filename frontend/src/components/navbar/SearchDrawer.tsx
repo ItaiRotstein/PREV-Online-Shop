@@ -1,6 +1,5 @@
 import { memo, useEffect, useRef, useState } from "react";
-import { AppState } from "../../context/AppContext";
-
+import { useSearchParams } from 'react-router-dom';
 import { IoClose } from "react-icons/io5";
 
 type Props = {
@@ -9,9 +8,7 @@ type Props = {
 };
 export const SearchDrawer = memo(({ isSearchDrawerOpen, setSearchDrawerOpen }: Props) => {
     const [searchText, setSearchText] = useState('');
-    const {
-        filterDispatch
-    } = AppState();
+    const [searchParams, setSearchParams] = useSearchParams();
 
     const inputRef = useRef<HTMLInputElement | null>(null);
 
@@ -20,10 +17,8 @@ export const SearchDrawer = memo(({ isSearchDrawerOpen, setSearchDrawerOpen }: P
     }, []);
 
     function handleSubmit() {
-        filterDispatch({
-            type: 'FILTER_BY_SEARCH_QUERY',
-            payload: searchText
-        });
+        searchParams.set('q', searchText);
+        setSearchParams(searchParams);
         setSearchDrawerOpen(false);
     }
 
@@ -38,7 +33,7 @@ export const SearchDrawer = memo(({ isSearchDrawerOpen, setSearchDrawerOpen }: P
                 >
                     <input
                         type="search"
-                        id="search-navbar"
+                        id="search-drawer"
                         ref={inputRef}
                         className="w-full p-2 text-base text-gray-900 rounded-sm bg-gray-50 outline-none focus:ring-2  focus:ring-blue-500"
                         placeholder="Search..."

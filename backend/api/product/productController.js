@@ -7,73 +7,94 @@ const Product = require('../../models/productModel');
 const getProducts = asyncHandler(async (req, res) => {
   console.log(req.query);
   const {
-    byInStock,
-    byNewIn,
-    itemsPerFetch,
-    searchQuery,
-    sort: {
-      byPrice,
-      byAlphabet,
-      byPopularity
-    },
-    bySize,
-    byMaterial,
-    byGender
+    fetchItems,
+    q,
+    instock,
+    newin,
+    sort,
+    size,
+    material,
+    gender,
+    price_min,
+    price_max
   } = req.query;
 
   const pipeline = [
     {
       $facet: {
-        data: [{ $limit: +itemsPerFetch }],
+        data: [{ $limit: Number(fetchItems) }],
         totalProductsCount: [{ $count: 'totalProducts' }],
       }
     },
   ];
 
-  if (searchQuery) {
-    if (searchQuery) {
-      pipeline.unshift({ $match: { name: { $regex: searchQuery, $options: 'i' } } });
-    }
+  //Search Query
+  if (q) {
+    pipeline.unshift({ $match: { name: { $regex: q, $options: 'i' } } });
   }
 
-  if (byPrice) {
-    const sortOrder = byPrice === 'lowtohigh' ? 1 : -1;
-    pipeline.unshift({ $sort: { price: sortOrder } });
+  //Sort
+  switch (sort) {
+    case 'popular':
+      pipeline.unshift({ $sort: { popularity: -1 } });
+      break;
+    case 'alphabet':
+      pipeline.unshift({ $sort: { name: 1 } });
+      break;
+    case 'price':
+      pipeline.unshift({ $sort: { price: 1 } });
+      break;
+    case 'price-rev':
+      pipeline.unshift({ $sort: { price: -1 } });
+      break;
+    default: return;
   }
 
-  if (byAlphabet === 'true') {
-    pipeline.unshift({ $sort: { name: 1 } });
-  }
-
-  if (byPopularity === 'true') {
-    pipeline.unshift({ $sort: { popularity: -1 } });
-  }
-
-  if (byInStock === 'true') {
+  if (instock) {
     pipeline.unshift({ $match: { inStock: true } });
   }
 
-  if (byNewIn === 'true') {
+  if (newin) {
     pipeline.unshift({ $match: { newIn: true } });
   }
 
   //SIZES
-  for (let i = 0; i < Object.keys(bySize).length; i++) {
-    if (Object.values(bySize)[i] == 'true') {
-      pipeline.unshift({ $match: { sizes: Object.keys(bySize)[i] } });
+  if (size) {
+    if (Array.isArray(size)) {
+      for (let i = 0; i < size.length; i++) {
+        pipeline.unshift({ $match: { sizes: size[i] } });
+      }
+    } else {
+      pipeline.unshift({ $match: { sizes: size } });
     }
   }
   //MATERIAL
-  for (let i = 0; i < Object.keys(byMaterial).length; i++) {
-    if (Object.values(byMaterial)[i] == 'true') {
-      pipeline.unshift({ $match: { material: Object.keys(byMaterial)[i] } });
+  if (material) {
+    if (Array.isArray(material)) {
+      for (let i = 0; i < material.length; i++) {
+        pipeline.unshift({ $match: { material: material[i] } });
+      }
+    } else {
+      pipeline.unshift({ $match: { material: material } });
     }
   }
   //GENDER
-  for (let i = 0; i < Object.keys(byGender).length; i++) {
-    if (Object.values(byGender)[i] == 'true') {
-      pipeline.unshift({ $match: { gender: Object.keys(byGender)[i] } });
+  if (gender) {
+    if (Array.isArray(gender)) {
+      for (let i = 0; i < gender.length; i++) {
+        pipeline.unshift({ $match: { gender: gender[i] } });
+      }
+    } else {
+      pipeline.unshift({ $match: { gender: gender } });
     }
+  }
+  //PRICE_MIN
+  if (price_min) {
+    pipeline.unshift({ $match: { price: { $gte: Number(price_min) } } });
+  }
+  //PRICE_MAX
+  if (price_max) {
+    pipeline.unshift({ $match: { price: { $lte: Number(price_max) } } });
   }
 
   const products = await Product.aggregate(pipeline);

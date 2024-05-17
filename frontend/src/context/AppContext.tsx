@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useContext, useReducer } from "react";
+import { ReactNode, createContext, useContext, useReducer, useState } from "react";
 
 import ProductReducer from "./ProductReducer";
 import CartReducer from "./CartReducer";
@@ -19,11 +19,14 @@ type ShoppingCart = {
     productState: ProductState;
     cartState: { cart: Product[]; };
     filterState: FilterState;
+    setSortMenuMobileShow: React.Dispatch<React.SetStateAction<boolean>>;
+    isSortMenuMobileShow: boolean;
 };
 
 const ShoppingCart = createContext({} as ShoppingCart);
 
 const AppContext = ({ children }: Props) => {
+    const [isSortMenuMobileShow, setSortMenuMobileShow] = useState(false);
 
     const [productState, productDispatch] = useReducer(ProductReducer, {
         products: [],
@@ -64,16 +67,7 @@ const AppContext = ({ children }: Props) => {
     });
 
     const [filterState, filterDispatch] = useReducer(FilterReducer, {
-        isSortMenuMobileShow: false,
-        byInStock: false,
-        byNewIn: false,
-        searchQuery: "",
-        itemsPerFetch: 20,
-        sort: {
-            byPrice: "",
-            byAlphabet: false,
-            byPopularity: true,
-        },
+        fetchItems: 20,
         bySize: {
             XS: false,
             S: false,
@@ -111,6 +105,8 @@ const AppContext = ({ children }: Props) => {
             productDispatch,
             cartDispatch,
             filterDispatch,
+            setSortMenuMobileShow,
+            isSortMenuMobileShow
         }}>
             {children}
         </ShoppingCart.Provider>

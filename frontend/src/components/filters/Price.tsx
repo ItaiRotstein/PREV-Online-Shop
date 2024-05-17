@@ -1,14 +1,18 @@
 import { useState, useEffect, useRef } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
+import { useDebouncedCallback } from "use-debounce";
 
 export const Price = () => {
+    const [searchParams, setSearchParams] = useSearchParams();
+
     const min = 0;
-    const max = 870;
+    const max = 200;
     const step = 10;
 
-    const [iseMenuShow, setMenuShow] = useState<boolean>(false);
+    const [iseMenuShow, setMenuShow] = useState(false);
 
     const progressRef = useRef<HTMLInputElement | null>(null);
     const [minValue, setMinValue] = useState(min);
@@ -16,12 +20,31 @@ export const Price = () => {
 
     const handleMin = (value: number) => {
         if (value < maxValue) setMinValue(value);
-
+        setMinPriceSearchParams(value);
     };
 
     const handleMax = (value: number) => {
         if (value > minValue) setMaxValue(value);
+        setMaxPriceSearchParams(value);
     };
+
+    const setMinPriceSearchParams = useDebouncedCallback((value: number) => {
+        if (!searchParams.has('price_min')) {
+            searchParams.append('price_min', value.toString());
+        } else {
+            searchParams.set('price_min', value.toString());
+        }
+        setSearchParams(searchParams);
+    }, 300);
+    
+    const setMaxPriceSearchParams = useDebouncedCallback((value: number) => {
+        if (!searchParams.has('price_max')) {
+            searchParams.append('price_max', value.toString());
+        } else {
+            searchParams.set('price_max', value.toString());
+        }
+        setSearchParams(searchParams);
+    }, 300);
 
     useEffect(() => {
         progressRef.current && (progressRef.current.style.left = (minValue / max) * 100 + "%");

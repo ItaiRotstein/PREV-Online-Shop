@@ -19,15 +19,17 @@ input[type="range"]::-webkit-slider-thumb {
   /* @apply w-6 h-6 appearance-none pointer-events-auto; */
 }
 
-@layer base {
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
 
+@layer base {
   @font-face {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     src: url(./assets/fonts/inter/Inter-Regular.ttf);
   }
-
   @font-face {
     font-family: 'Merriweather';
     font-style: normal;
