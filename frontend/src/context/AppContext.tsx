@@ -2,11 +2,9 @@ import { ReactNode, createContext, useContext, useReducer, useState } from "reac
 
 import ProductReducer from "./ProductReducer";
 import CartReducer from "./CartReducer";
-import FilterReducer from "./FilterReducer";
 
 import { Product, ProductActions, ProductState } from "../types/Product";
 import { CartActions } from "../types/Cart";
-import { FilterActions, FilterState } from "../types/Filter";
 
 type Props = {
     children: ReactNode;
@@ -15,10 +13,8 @@ type Props = {
 type ShoppingCart = {
     productDispatch: React.Dispatch<ProductActions>;
     cartDispatch: React.Dispatch<CartActions>;
-    filterDispatch: React.Dispatch<FilterActions>;
     productState: ProductState;
     cartState: { cart: Product[]; };
-    filterState: FilterState;
     setSortMenuMobileShow: React.Dispatch<React.SetStateAction<boolean>>;
     isSortMenuMobileShow: boolean;
 };
@@ -30,6 +26,7 @@ const AppContext = ({ children }: Props) => {
 
     const [productState, productDispatch] = useReducer(ProductReducer, {
         products: [],
+        fetchItems: 20,
         totalProductsCount: 0,
         inStockCount: 0,
         newInCount: 0,
@@ -66,45 +63,12 @@ const AppContext = ({ children }: Props) => {
         cart: []
     });
 
-    const [filterState, filterDispatch] = useReducer(FilterReducer, {
-        fetchItems: 20,
-        bySize: {
-            XS: false,
-            S: false,
-            M: false,
-            L: false,
-            XL: false,
-        },
-        byMaterial: {
-            Cashmere: false,
-            Cotton: false,
-            Polyester: false,
-            Leather: false,
-            Rubber: false,
-            Denim: false,
-            Wool: false,
-            Acrylic: false,
-            Silk: false,
-            Suede: false,
-            Spandex: false,
-        },
-        byGender: {
-            Woman: false,
-            Man: false,
-            Older_Boys: false,
-            Younger_Boys: false,
-            Unisex: false,
-        },
-    });
-
     return (
         <ShoppingCart.Provider value={{
             productState,
             cartState,
-            filterState,
             productDispatch,
             cartDispatch,
-            filterDispatch,
             setSortMenuMobileShow,
             isSortMenuMobileShow
         }}>

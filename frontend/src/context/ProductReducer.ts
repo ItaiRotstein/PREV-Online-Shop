@@ -4,6 +4,8 @@ const ProductReducer = (state: ProductState, action: ProductActions) => {
   switch (action.type) {
     case "GET_PRODUCTS":
       return { ...state, products: action.payload };
+      case "SET_ITEMS_PER_FETCH":
+            return { ...state, fetchItems: state.fetchItems + 20 };
     case "GET_TOTAL_PRODUCTS_COUNT":
       return { ...state, totalProductsCount: action.payload };
     case "GET_PRODUCTS_DATA":

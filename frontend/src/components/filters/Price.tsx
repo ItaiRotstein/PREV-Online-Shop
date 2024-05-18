@@ -19,13 +19,17 @@ export const Price = () => {
     const [maxValue, setMaxValue] = useState(max);
 
     const handleMin = (value: number) => {
-        if (value < maxValue) setMinValue(value);
-        setMinPriceSearchParams(value);
+        if (value < maxValue) {
+            setMinValue(value);
+            setMinPriceSearchParams(value);
+        }
     };
 
     const handleMax = (value: number) => {
-        if (value > minValue) setMaxValue(value);
-        setMaxPriceSearchParams(value);
+        if (value > minValue) {
+            setMaxValue(value);
+            setMaxPriceSearchParams(value);
+        }
     };
 
     const setMinPriceSearchParams = useDebouncedCallback((value: number) => {
@@ -36,7 +40,7 @@ export const Price = () => {
         }
         setSearchParams(searchParams);
     }, 300);
-    
+
     const setMaxPriceSearchParams = useDebouncedCallback((value: number) => {
         if (!searchParams.has('price_max')) {
             searchParams.append('price_max', value.toString());

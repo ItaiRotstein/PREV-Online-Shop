@@ -18,9 +18,7 @@ export const Home = () => {
   const scrollRef = useRef<null | HTMLDivElement>(null);
 
   const {
-    filterState: { fetchItems },
-    filterDispatch,
-    productState: { products, totalProductsCount },
+    productState: { products, totalProductsCount, fetchItems },
     productDispatch,
     setSortMenuMobileShow,
   } = AppState();
@@ -41,7 +39,6 @@ export const Home = () => {
     });
     return result;
   }
-
 
   useEffect(() => {
     const getProducts = async () => {
@@ -97,7 +94,7 @@ export const Home = () => {
       setIsFetchingMore(true);
       setIsLoading(true);
       setSearchParams(searchParams);
-      filterDispatch({ type: "SET_ITEMS_PER_FETCH" });
+      productDispatch({ type: "SET_ITEMS_PER_FETCH" });
     }
   }
 
@@ -109,17 +106,16 @@ export const Home = () => {
       className="h-full"
     >
       <Navbar />
-      <div>
+      {/* <div> */}
         <main className="flex relative mx-auto xl:max-w-[1280px]">
           <Filters />
           <div ref={scrollRef} className="lg:w-3/4 xl:w-4/5 flex flex-wrap justify-center px-1 md:px-2  mt-3 lg:mt-0">
-            {/* <HomeHeader /> */}
             {products.map(prod => (
               <ProductPreview prod={{ ...prod }} key={prod._id} />
             ))}
           </div>
         </main>
-      </div>
+      {/* </div> */}
       {isLoading && <Spinner isLoading={isLoading} />}
       <Footer />
     </div>

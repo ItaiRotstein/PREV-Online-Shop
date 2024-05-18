@@ -18,11 +18,17 @@ export type Product = {
 type GetProducts = { type: "GET_PRODUCTS"; payload: Product[]; };
 type GetTotalProductsCount = { type: "GET_TOTAL_PRODUCTS_COUNT"; payload: number; };
 type GetProductsData = { type: "GET_PRODUCTS_DATA"; payload: ProductState; };
+type FetchItems = { type: "SET_ITEMS_PER_FETCH"; };
 
-export type ProductActions = GetProducts | GetProductsData | GetTotalProductsCount;
+export type ProductActions =
+        GetProducts |
+        GetProductsData |
+        GetTotalProductsCount |
+        FetchItems;
 
 export type ProductState = {
         products: Product[];
+        fetchItems: number;
         totalProductsCount: number;
         inStockCount: number;
         newInCount: number;
