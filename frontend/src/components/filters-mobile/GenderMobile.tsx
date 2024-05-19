@@ -39,7 +39,7 @@ export const GenderMobile = ({ idx, activeFilterIdx, setActiveFilterIdx }: Props
             <div className={`py-3  ps-4 ${!activeFilterIdx && "border-b border-b-gray-300"} ${activeFilterIdx === idx && "bg-gray-600 text-white"} cursor-pointer`}>
                 <p onClick={() => setActiveFilterIdx(idx)}>Gender</p>
             </div>
-            {activeFilterIdx === idx && <div className="absolute h-full w-full top-[45px] left-[240px] bg-white border-s ">
+            {activeFilterIdx === idx && <div className="absolute h-full w-full top-[45px] left-[160px] bg-white border-s ">
                 {genderList.map((gender, idx) =>
                     <div
                         key={utilService.makeId()}

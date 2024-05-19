@@ -6,17 +6,18 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useDebouncedCallback } from "use-debounce";
 
 export const Price = () => {
-    const [searchParams, setSearchParams] = useSearchParams();
-
     const min = 0;
     const max = 200;
     const step = 10;
 
     const [iseMenuShow, setMenuShow] = useState(false);
 
-    const progressRef = useRef<HTMLInputElement | null>(null);
     const [minValue, setMinValue] = useState(min);
     const [maxValue, setMaxValue] = useState(max);
+
+    const [searchParams, setSearchParams] = useSearchParams();
+    
+    const progressRef = useRef<HTMLInputElement | null>(null);
 
     const handleMin = (value: number) => {
         if (value < maxValue) {

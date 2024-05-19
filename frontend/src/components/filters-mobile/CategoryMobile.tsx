@@ -36,7 +36,7 @@ export const CategoryMobile = ({ idx, activeFilterIdx, setActiveFilterIdx }: Pro
         "Tops",
         "Polos",
     ];
-    
+
     function handleClick(category: string) {
         if (!searchParams.has('category', category)) {
             searchParams.append('category', category);
@@ -50,7 +50,9 @@ export const CategoryMobile = ({ idx, activeFilterIdx, setActiveFilterIdx }: Pro
             <div className={`py-3 ps-4 ${!activeFilterIdx && "border-b border-b-gray-300"} ${activeFilterIdx === idx && "bg-gray-600 text-white"} cursor-pointer`}>
                 <p onClick={() => setActiveFilterIdx(idx)}>Category</p>
             </div>
-            {activeFilterIdx === idx && <div className="absolute h-full w-full top-[45px] left-[240px] bg-white border-s border-s-gray-400">
+        {
+            activeFilterIdx === idx &&
+            <div className="absolute h-full w-full top-[45px] left-[160px] bg-white border-s border-s-gray-400">
                 {categoryList.map((category, idx) =>
                     <div
                         key={utilService.makeId()}
@@ -61,7 +63,8 @@ export const CategoryMobile = ({ idx, activeFilterIdx, setActiveFilterIdx }: Pro
                         {searchParams.has('category', category) && <FaCheck className="w-5 h-5 ms-2 text-green-600" />}
                     </div>
                 )}
-            </div>}
+            </div>
+        }
         </>
     );
 };

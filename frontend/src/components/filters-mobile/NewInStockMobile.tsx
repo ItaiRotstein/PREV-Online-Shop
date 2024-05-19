@@ -14,7 +14,7 @@ export const NewInStockMobile = ({ activeFilterIdx }: { activeFilterIdx: number 
         if(searchParams.has('instock','true')) {
             searchParams.delete('instock', 'true');
         }else{
-            searchParams.append('instock', ['true'].toString());
+            searchParams.append('instock', 'true');
         }
         setSearchParams(searchParams);
     }
@@ -34,7 +34,7 @@ export const NewInStockMobile = ({ activeFilterIdx }: { activeFilterIdx: number 
                 onClick={handleNewIn}
             >
                 <p> New In ({newInCount}) </p>
-                {searchParams.has('newin') && <FaCheck className={`w-5 h-5 ${activeFilterIdx ? "ms-[128px]" : "ms-auto"} me-4 text-green-600`} />}
+                {searchParams.has('newin') && <FaCheck className={`w-5 h-5 ${activeFilterIdx ? "ms-[40px]" : "ms-auto"} me-4 text-green-600`} />}
             </div>
             <div
                 className="flex items-center py-2 cursor-pointer"
@@ -42,7 +42,7 @@ export const NewInStockMobile = ({ activeFilterIdx }: { activeFilterIdx: number 
                 onClick={handleInstock}
             >
                 <p> In Stock ({inStockCount}) </p>
-                {searchParams.has('instock') && <FaCheck className={`w-5 h-5 ${activeFilterIdx ? "ms-[120px]" : "ms-auto"} me-4 text-green-600`} />}
+                {searchParams.has('instock') && <FaCheck className={`w-5 h-5 ${activeFilterIdx ? "ms-[32px]" : "ms-auto"} me-4 text-green-600`} />}
             </div>
         </div>
     );

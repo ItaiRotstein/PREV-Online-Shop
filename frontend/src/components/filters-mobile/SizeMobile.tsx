@@ -39,7 +39,7 @@ export const SizeMobile = ({ idx, activeFilterIdx, setActiveFilterIdx }: Props) 
             <div className={`py-3 ps-4 ${!activeFilterIdx && "border-b border-b-gray-300"} ${activeFilterIdx === idx && "bg-gray-600 text-white"} cursor-pointer`}>
                 <p onClick={() => setActiveFilterIdx(idx)}>Size</p>
             </div>
-            {activeFilterIdx === idx && <div className="absolute h-full w-full top-[45px] left-[240px] bg-white border-s transition-all">
+            {activeFilterIdx === idx && <div className="absolute h-full w-full top-[45px] left-[160px] bg-white border-s transition-all">
                 {sizeList.map((size, idx) =>
                     <div
                         key={utilService.makeId()}
