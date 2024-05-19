@@ -1,13 +1,15 @@
 import { memo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
-import { TbAdjustmentsHorizontal } from "react-icons/tb";
 import { IoClose } from "react-icons/io5";
+import { TbAdjustmentsHorizontal } from "react-icons/tb";
+
 import { SizeMobile } from "./SizeMobile";
 import { MaterialMobile } from "./MaterialMobile";
 import { GenderMobile } from "./GenderMobile";
 import { NewInStockMobile } from "./NewInStockMobile";
 import { AppState } from "../../context/AppContext";
-import { useSearchParams } from "react-router-dom";
+import { CategoryMobile } from "./CategoryMobile";
 
 export const FiltersMobile = memo(() => {
     const [isFiltertMenuShow, setFilterMenuShow] = useState<boolean>(false);
@@ -22,9 +24,9 @@ export const FiltersMobile = memo(() => {
     document.body.style.overflow = isFiltertMenuShow ? "hidden" : "auto";
 
     function handleClearAll() {
-        searchParams = new URLSearchParams()
-        searchParams.append('sort', 'popular' )
-        setSearchParams(searchParams)
+        searchParams = new URLSearchParams();
+        searchParams.append('sort', 'popular');
+        setSearchParams(searchParams);
     }
     return (
         <>
@@ -38,7 +40,7 @@ export const FiltersMobile = memo(() => {
                 <TbAdjustmentsHorizontal className="w-5 h-5" />
                 Filter
             </button>
-            {isFiltertMenuShow && <div className={`fixed top-0 ${isFiltertMenuShow ? "right-0" : "-right-full"} w-full h-full transition-all duration-500 z-20 bg-white text-black text-sm font-medium`}>
+            <div className={`fixed top-0 ${isFiltertMenuShow ? "right-0" : "-right-full"} w-full h-full transition-all duration-500 z-20 bg-white text-black text-sm font-medium`}>
                 <div className="flex justify-between items-center py-3 ps-3 pe-5 border-b border-b-gray-400 bg-[rgb(247,247,247)]">
                     <div className="flex items-center gap-3">
                         <IoClose
@@ -59,6 +61,7 @@ export const FiltersMobile = memo(() => {
                     <SizeMobile idx={1} activeFilterIdx={activeFilterIdx} setActiveFilterIdx={setActiveFilterIdx} />
                     <MaterialMobile idx={2} activeFilterIdx={activeFilterIdx} setActiveFilterIdx={setActiveFilterIdx} />
                     <GenderMobile idx={3} activeFilterIdx={activeFilterIdx} setActiveFilterIdx={setActiveFilterIdx} />
+                    <CategoryMobile idx={4} activeFilterIdx={activeFilterIdx} setActiveFilterIdx={setActiveFilterIdx} />
                 </div>
                 <div className="fixed bottom-0 p-4 w-full flex justify-center bg-gray-100 border-t">
                     {
@@ -78,7 +81,7 @@ export const FiltersMobile = memo(() => {
                         )
                     }
                 </div>
-            </div>}
+            </div>
         </>
     );
 });

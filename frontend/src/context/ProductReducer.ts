@@ -4,8 +4,8 @@ const ProductReducer = (state: ProductState, action: ProductActions) => {
   switch (action.type) {
     case "GET_PRODUCTS":
       return { ...state, products: action.payload };
-      case "SET_ITEMS_PER_FETCH":
-            return { ...state, fetchItems: state.fetchItems + 20 };
+    case "SET_ITEMS_PER_FETCH":
+      return { ...state, fetchItems: state.fetchItems + 20 };
     case "GET_TOTAL_PRODUCTS_COUNT":
       return { ...state, totalProductsCount: action.payload };
     case "GET_PRODUCTS_DATA":
@@ -45,6 +45,29 @@ const ProductReducer = (state: ProductState, action: ProductActions) => {
           countOlderBoys: action.payload.genderCount.countOlderBoys,
           countYoungerBoys: action.payload.genderCount.countYoungerBoys,
           countUnisex: action.payload.genderCount.countUnisex,
+        },
+        //CATEGORY COUNT
+        categoryCount: {
+          ...state.categoryCount,
+          Shirts: action.payload.categoryCount.Shirts,
+          Dresses: action.payload.categoryCount.Dresses,
+          Jeans: action.payload.categoryCount.Jeans,
+          Sweaters: action.payload.categoryCount.Sweaters,
+          Hoodies: action.payload.categoryCount.Hoodies,
+          T_Shirts: action.payload.categoryCount.T_Shirts,
+          Jackets: action.payload.categoryCount.Jackets,
+          Blouses: action.payload.categoryCount.Blouses,
+          Pants: action.payload.categoryCount.Pants,
+          Blazers: action.payload.categoryCount.Blazers,
+          Accessories: action.payload.categoryCount.Accessories,
+          Socks: action.payload.categoryCount.Socks,
+          Bags: action.payload.categoryCount.Bags,
+          Vests: action.payload.categoryCount.Vests,
+          Hats: action.payload.categoryCount.Hats,
+          Shoes: action.payload.categoryCount.Shoes,
+          Shorts: action.payload.categoryCount.Shorts,
+          Tops: action.payload.categoryCount.Tops,
+          Polos: action.payload.categoryCount.Polos,
         },
       };
     default:

@@ -12,19 +12,19 @@ export const NewInStock = () => {
     } = AppState();
 
     function handleInstock() {
-        if (searchParams.has('instock', 'include')) {
-            searchParams.delete('instock', 'include');
+        if (searchParams.has('instock', 'true')) {
+            searchParams.delete('instock', 'true');
         } else {
-            searchParams.append('instock', ['include'].toString());
+            searchParams.append('instock', ['true'].toString());
         }
         setSearchParams(searchParams);
     }
 
     function handleNewIn() {
-        if (searchParams.has('newin', 'include')) {
-            searchParams.delete('newin', 'include');
+        if (searchParams.has('newin', 'true')) {
+            searchParams.delete('newin', 'true');
         } else {
-            searchParams.append('newin', 'include');
+            searchParams.append('newin', 'true');
         }
         setSearchParams(searchParams);
     }
@@ -36,7 +36,7 @@ export const NewInStock = () => {
                     <input
                         id="new-in"
                         type="checkbox"
-                        checked={searchParams.has('newin', 'include')}
+                        checked={searchParams.has('newin')}
                         onChange={handleNewIn}
                         className="w-5 h-5 text-blue-600 bg-gray-100 rounded cursor-pointer"
                     />
@@ -46,7 +46,7 @@ export const NewInStock = () => {
                     <input
                         id="in-stock"
                         type="checkbox"
-                        checked={searchParams.has('instock', 'include')}
+                        checked={searchParams.has('instock')}
                         onChange={handleInstock}
                         className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded cursor-pointer"
                     />

@@ -59,4 +59,25 @@ export type ProductState = {
                 countYoungerBoys: number;
                 countUnisex: number;
         },
+        categoryCount: {
+                Shirts: number;
+                Dresses: number;
+                Jeans: number;
+                Sweaters: number;
+                Hoodies: number;
+                T_Shirts: number;
+                Jackets: number;
+                Blouses: number;
+                Pants: number;
+                Blazers: number;
+                Accessories: number;
+                Socks: number;
+                Bags: number;
+                Vests: number;
+                Hats: number;
+                Shoes: number;
+                Shorts: number;
+                Tops: number;
+                Polos: number;
+        },
 };

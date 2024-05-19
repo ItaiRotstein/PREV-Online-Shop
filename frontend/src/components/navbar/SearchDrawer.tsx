@@ -14,7 +14,7 @@ export const SearchDrawer = memo(({ isSearchDrawerOpen, setSearchDrawerOpen }: P
 
     useEffect(() => {
         inputRef.current?.focus();
-    }, []);
+    }, [isSearchDrawerOpen]);
 
     function handleSubmit() {
         searchParams.set('q', searchText);

@@ -15,6 +15,7 @@ const getProducts = asyncHandler(async (req, res) => {
     size,
     material,
     gender,
+    category,
     price_min,
     price_max
   } = req.query;
@@ -88,6 +89,18 @@ const getProducts = asyncHandler(async (req, res) => {
       pipeline.unshift({ $match: { gender: gender } });
     }
   }
+
+  //CATEGORY  
+  if (category) {
+    if (Array.isArray(category)) {
+      for (let i = 0; i < category.length; i++) {
+        pipeline.unshift({ $match: { category: category[i] } });
+      }
+    } else {
+      pipeline.unshift({ $match: { category: category } });
+    }
+  }
+  
   //PRICE_MIN
   if (price_min) {
     pipeline.unshift({ $match: { price: { $gte: Number(price_min) } } });
@@ -140,6 +153,26 @@ const getProductsData = asyncHandler(async (req, res) => {
         countOlderBoys: [{ $match: { gender: 'Older_Boys' } }, { $count: 'OlderBoys' }],
         countYoungerBoys: [{ $match: { gender: 'Younger_Boys' } }, { $count: 'YoungerBoys' }],
         countUnisex: [{ $match: { gender: 'Unisex' } }, { $count: 'Unisex' }],
+        //CATEGORY
+        Shirts: [{ $match: { category: "Shirts", } }, { $count: "Shirts", }],
+        Dresses: [{ $match: { category: "Dresses", } }, { $count: "Dresses", }],
+        Jeans: [{ $match: { category: "Jeans", } }, { $count: "Jeans", }],
+        Sweaters: [{ $match: { category: "Sweaters", } }, { $count: "Sweaters", }],
+        Hoodies: [{ $match: { category: "Hoodies", } }, { $count: "Hoodies", }],
+        T_Shirts: [{ $match: { category: "T-Shirts", } }, { $count: "T-Shirts", }],
+        Jackets: [{ $match: { category: "Jackets", } }, { $count: "Jackets", }],
+        Blouses: [{ $match: { category: "Blouses", } }, { $count: "Blouses", }],
+        Pants: [{ $match: { category: "Pants", } }, { $count: "Pants", }],
+        Blazers: [{ $match: { category: "Blazers", } }, { $count: "Blazers", }],
+        Accessories: [{ $match: { category: "Accessories", } }, { $count: "Accessories", }],
+        Socks: [{ $match: { category: "Socks", } }, { $count: "Socks", }],
+        Bags: [{ $match: { category: "Bags", } }, { $count: "Bags", }],
+        Vests: [{ $match: { category: "Vests", } }, { $count: "Vests", }],
+        Hats: [{ $match: { category: "Hats", } }, { $count: "Hats", }],
+        Shoes: [{ $match: { category: "Shoes", } }, { $count: "Shoes", }],
+        Shorts: [{ $match: { category: "Shorts", } }, { $count: "Shorts", }],
+        Tops: [{ $match: { category: "Tops", } }, { $count: "Tops", }],
+        Polos: [{ $match: { category: "Polos", } }, { $count: "Polos", }],
       }
     },
   ];
@@ -182,6 +215,28 @@ const getProductsData = asyncHandler(async (req, res) => {
       countOlderBoys: !products[0].countOlderBoys.length ? 0 : products[0].countOlderBoys[0].OlderBoys,
       countYoungerBoys: !products[0].countYoungerBoys.length ? 0 : products[0].countYoungerBoys[0].YoungerBoys,
       countUnisex: !products[0].countUnisex.length ? 0 : products[0].countUnisex[0].Unisex,
+    },
+    //CATEGORY
+    categoryCount: {
+      Shirts: !products[0].Shirtslength ? 0 : products[0].Shirts[0].Shirts,
+      Dresses: !products[0].Dresses.length ? 0 : products[0].Dresses[0].Dresses,
+      Jeans: !products[0].Jeans.length ? 0 : products[0].Jeans[0].Jeans,
+      Sweaters: !products[0].Sweaters.length ? 0 : products[0].Sweaters[0].Sweaters,
+      Hoodies: !products[0].Hoodies.length ? 0 : products[0].Hoodies[0].Hoodies,
+      T_Shirts: !products[0].T_Shirts.length ? 0 : products[0].T_Shirts[0].T_Shirts,
+      Jackets: !products[0].Jackets.length ? 0 : products[0].Jackets[0].Jackets,
+      Blouses: !products[0].Blouses.length ? 0 : products[0].Blouses[0].Blouses,
+      Pants: !products[0].Pants.length ? 0 : products[0].Pants[0].Pants,
+      Blazers: !products[0].Blazers.length ? 0 : products[0].Blazers[0].Blazers,
+      Accessories: !products[0].Accessories.length ? 0 : products[0].Accessories[0].Accessories,
+      Socks: !products[0].Socks.length ? 0 : products[0].Socks[0].Socks,
+      Bags: !products[0].Bags.length ? 0 : products[0].Bags[0].Bags,
+      Vests: !products[0].Vests.length ? 0 : products[0].Vests[0].Vests,
+      Hats: !products[0].Hats.length ? 0 : products[0].Hats[0].Hats,
+      Shoes: !products[0].Shoes.length ? 0 : products[0].Shoes[0].Shoes,
+      Shorts: !products[0].Shorts.length ? 0 : products[0].Shorts[0].Shorts,
+      Tops: !products[0].Tops.length ? 0 : products[0].Tops[0].Tops,
+      Polos: !products[0].Polos.length ? 0 : products[0].Polos[0].Polos,
     },
   });
 });

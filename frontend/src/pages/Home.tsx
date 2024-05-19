@@ -25,9 +25,8 @@ export const Home = () => {
 
   function entriesToObject(entries: any) {
     const result: any = {};
-
-    entries.forEach(([key, value]: any) => {
-      if (result.hasOwnProperty(key)) {
+    entries.forEach((value: any, key: any) => {
+      if (result[key]) {
         if (Array.isArray(result[key])) {
           result[key].push(value);
         } else {
@@ -43,7 +42,7 @@ export const Home = () => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const data = await productService.getProducts(entriesToObject(searchParams.entries()), fetchItems);
+        const data = await productService.getProducts(entriesToObject(searchParams), fetchItems);
         productDispatch({
           type: "GET_PRODUCTS",
           payload: data.products
@@ -107,14 +106,14 @@ export const Home = () => {
     >
       <Navbar />
       {/* <div> */}
-        <main className="flex relative mx-auto xl:max-w-[1280px]">
-          <Filters />
-          <div ref={scrollRef} className="lg:w-3/4 xl:w-4/5 flex flex-wrap justify-center px-1 md:px-2  mt-3 lg:mt-0">
-            {products.map(prod => (
-              <ProductPreview prod={{ ...prod }} key={prod._id} />
-            ))}
-          </div>
-        </main>
+      <main className="flex relative mx-auto xl:max-w-[1280px]">
+        <Filters />
+        <div ref={scrollRef} className="lg:w-3/4 xl:w-4/5 flex flex-wrap justify-center px-1 md:px-2  mt-3 lg:mt-0">
+          {products.map(prod => (
+            <ProductPreview prod={{ ...prod }} key={prod._id} />
+          ))}
+        </div>
+      </main>
       {/* </div> */}
       {isLoading && <Spinner isLoading={isLoading} />}
       <Footer />

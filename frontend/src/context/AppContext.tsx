@@ -57,6 +57,27 @@ const AppContext = ({ children }: Props) => {
             countYoungerBoys: 0,
             countUnisex: 0,
         },
+        categoryCount: {
+                Shirts: 0,
+                Dresses: 0,
+                Jeans: 0,
+                Sweaters: 0,
+                Hoodies: 0,
+                T_Shirts: 0,
+                Jackets: 0,
+                Blouses: 0,
+                Pants: 0,
+                Blazers: 0,
+                Accessories: 0,
+                Socks: 0,
+                Bags: 0,
+                Vests: 0,
+                Hats: 0,
+                Shoes: 0,
+                Shorts: 0,
+                Tops: 0,
+                Polos: 0,
+        },
     });
 
     const [cartState, cartDispatch] = useReducer(CartReducer, {
