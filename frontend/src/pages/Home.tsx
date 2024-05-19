@@ -25,7 +25,7 @@ export const Home = () => {
 
   function entriesToObject(entries: any) {
     const result: any = {};
-    entries.forEach((value: any, key: any) => {
+    entries.forEach((value: string, key: string) => {
       if (result[key]) {
         if (Array.isArray(result[key])) {
           result[key].push(value);

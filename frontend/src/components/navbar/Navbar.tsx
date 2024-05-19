@@ -10,7 +10,7 @@ import { SortHeader } from "./SortHeader";
 
 export const Navbar = () => {
     const [isUpperNavbarShow, setUpperNavbarShow] = useState(true);
-    const [isSearchDrawerOpen, setSearchDrawerOpen] = useState<boolean>(false);
+    const [isSearchDrawerOpen, setSearchDrawerOpen] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
 
     useEffect(() => {
@@ -29,6 +29,7 @@ export const Navbar = () => {
     return (
         <>
             <SearchDrawer isSearchDrawerOpen={isSearchDrawerOpen} setSearchDrawerOpen={setSearchDrawerOpen} />
+            <OffCanvas isSearchDrawerOpen={isSearchDrawerOpen} setSearchDrawerOpen={setSearchDrawerOpen} />
             <nav className="text-white sticky top-0 z-10">
                 <div className="xl:bg-black">
                     <NavbarUpper isUpperNavbarShow={isUpperNavbarShow} setSearchDrawerOpen={setSearchDrawerOpen} />
@@ -40,8 +41,6 @@ export const Navbar = () => {
                     <FiltersMobile />
                 </div>
             </nav>
-
-            {isSearchDrawerOpen && <OffCanvas closeDrawer={() => setSearchDrawerOpen(false)} />}
         </>
     );
 };

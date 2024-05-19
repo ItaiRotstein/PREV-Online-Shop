@@ -63,7 +63,7 @@ export const FiltersMobile = memo(() => {
                     <GenderMobile idx={3} activeFilterIdx={activeFilterIdx} setActiveFilterIdx={setActiveFilterIdx} />
                     <CategoryMobile idx={4} activeFilterIdx={activeFilterIdx} setActiveFilterIdx={setActiveFilterIdx} />
                 </div>
-                <div className="fixed bottom-0 p-4 w-full flex justify-center bg-gray-100 border-t">
+                <div className="sticky bottom-0 p-4 w-full flex justify-center bg-gray-100 border-t">
                     {
                         totalProductsCount > 0 ? (
                             <button

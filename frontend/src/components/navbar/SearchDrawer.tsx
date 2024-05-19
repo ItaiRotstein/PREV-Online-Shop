@@ -13,7 +13,10 @@ export const SearchDrawer = memo(({ isSearchDrawerOpen, setSearchDrawerOpen }: P
     const inputRef = useRef<HTMLInputElement | null>(null);
 
     useEffect(() => {
-        inputRef.current?.focus();
+        isSearchDrawerOpen ?
+            inputRef.current?.focus()
+            :
+            inputRef.current?.blur();
     }, [isSearchDrawerOpen]);
 
     function handleSubmit() {
@@ -23,7 +26,7 @@ export const SearchDrawer = memo(({ isSearchDrawerOpen, setSearchDrawerOpen }: P
     }
 
     return (
-        <div className={`fixed ${isSearchDrawerOpen ? " right-0" : "block -right-full"} shadow-xlg w-[92%] h-full transition-all duration-500 z-20 bg-white text-black`}>
+        <div className={`fixed ${isSearchDrawerOpen ? " right-0" : "block -right-full"} shadow-xlg w-[92%] h-full transition-all duration-500 z-30 bg-white text-black`}>
             <div className="relative md:flex grow items-center justify-between md:w-auto" id="navbar-search">
                 <form action="."
                     onSubmit={(e) => {
